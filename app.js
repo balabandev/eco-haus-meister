@@ -6,7 +6,15 @@ const translations = {
         stages: "Этапы строительства",
         advantages: "Преимущества",
         projects: "Проекты",
-        contacts: "Контакты"
+        contacts: "Контакты",
+        question: "Есть вопросы?",
+        contact: "Свяжитесь с нами",
+        name: "Ваше имя",
+        email: "Ваш email",
+        phone: "Телефон",
+        subject: "Тема",
+        message: "Ваше сообщение",
+        send: "Отправить"
     },
 
     en: {
@@ -15,7 +23,15 @@ const translations = {
         stages: "Construction Stages",
         advantages: "Advantages",
         projects: "Projects",
-        contacts: "Contacts"
+        contacts: "Contacts",
+        question: "Any questions?",
+        contact: "Contact Us",
+        name: "Your name",
+        email: "Your email",
+        phone: "Phone",
+        subject: "Subject",
+        message: "Your message",
+        send: "Send"
     },
 
     ro: {
@@ -24,7 +40,15 @@ const translations = {
         stages: "Etapele construcției",
         advantages: "Avantaje",
         projects: "Proiecte",
-        contacts: "Contacte"
+        contacts: "Contacte",
+        question: "Aveți întrebări?",
+        contact: "Contactați-ne",
+        name: "Numele dvs.",
+        email: "Emailul dvs.",
+        phone: "Telefon",
+        subject: "Subiect",
+        message: "Mesajul dvs.",
+        send: "Trimite"
     },
 
     de: {
@@ -33,7 +57,15 @@ const translations = {
         stages: "Bauphasen",
         advantages: "Vorteile",
         projects: "Projekte",
-        contacts: "Kontakte"
+        contacts: "Kontakte",
+        question: "Haben Sie Fragen?",
+        contact: "Kontaktieren Sie uns",
+        name: "Ihr Name",
+        email: "Ihre E-Mail",
+        phone: "Telefon",
+        subject: "Betreff",
+        message: "Ihre Nachricht",
+        send: "Senden"
     }
 
 };
@@ -50,9 +82,15 @@ function setLang(lang) {
 
     elements.forEach(el => {
         const key = el.getAttribute("data-key");
-        el.innerText = translations[lang][key];
+
+        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            el.placeholder = translations[lang][key];
+        } else {
+            el.innerText = translations[lang][key];
+        }
     });
 
     document.getElementById("langMenu").classList.add("hidden");
 
+    localStorage.setItem("lang", lang);
 }
