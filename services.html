@@ -99,9 +99,123 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="py-20">
+        <div class="container mx-auto px-6 text-center">
 
+            <!-- Title -->
+            <h2 class="text-3xl font-bold text-[#3e2723] mb-4" data-key="servicesTitle">
+                Наши услуги
+            </h2>
+
+            <p class="text-gray-600 max-w-2xl mx-auto mb-12" data-key="servicesDesc">
+                Мы предоставляем комплексные услуги в сфере строительства.
+            </p>
+
+            <!-- Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div onclick="openModal('modal1')"
+                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
+
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+                        class="rounded-t-xl h-48 w-full object-cover">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service1">
+                            Проектирование
+                        </h3>
+
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-full"
+                            data-key="learnMore">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div onclick="openModal('modal2')"
+                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
+
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+                        class="rounded-t-xl h-48 w-full object-cover">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service2">
+                            Инжиниринг
+                        </h3>
+
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-full"
+                            data-key="learnMore">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div onclick="openModal('modal3')"
+                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
+
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+                        class="rounded-t-xl h-48 w-full object-cover">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service3">
+                            Строительство
+                        </h3>
+
+                        <button class="mt-4 bg-green-600 text-white px-4 py-2 rounded-full"
+                            data-key="learnMore">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
+
+    <div id="modal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+
+            <button onclick="closeModal('modal1')" class="absolute top-3 right-3 text-xl">✕</button>
+
+            <h3 class="text-2xl font-bold mb-4" data-key="service1">Проектирование</h3>
+
+            <p class="text-gray-600" data-key="service1Desc">
+                Мы создаем современные и эффективные проекты домов.
+            </p>
+        </div>
+    </div>
+    <div id="modal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+
+            <button onclick="closeModal('modal2')" class="absolute top-3 right-3 text-xl">✕</button>
+
+            <h3 class="text-2xl font-bold mb-4" data-key="service2">
+                Инжиниринг
+            </h3>
+
+            <p class="text-gray-600" data-key="service2Desc">
+                Комплексные инженерные решения.
+            </p>
+        </div>
+    </div>
+    <div id="modal3" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+
+            <button onclick="closeModal('modal3')" class="absolute top-3 right-3 text-xl">✕</button>
+
+            <h3 class="text-2xl font-bold mb-4" data-key="service3">
+                Строительство
+            </h3>
+
+            <p class="text-gray-600" data-key="service3Desc">
+                Полный цикл строительства домов.
+            </p>
+        </div>
+    </div>
+
     <footer class="bg-amber-50 py-16">
         <div class="container mx-auto px-6">
 
