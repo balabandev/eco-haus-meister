@@ -15,7 +15,7 @@ const translations = {
         subject: "Тема",
         message: "Ваше сообщение",
         send: "Отправить",
-         servicesTitle: "Наши услуги",
+        servicesTitle: "Наши услуги",
         servicesDesc: "Мы предоставляем комплексные услуги в сфере строительства.",
         service1: "Проектирование",
         service2: "Инжиниринг",
@@ -43,7 +43,21 @@ const translations = {
         stage8: "Проверка и сдача",
         stage8Desc: "Контроль качества",
         stage9: "Сдача и заселение",
-        stage9Desc: "Передача дома клиенту"
+        stage9Desc: "Передача дома клиенту",
+        advantagesTitle: "Наши преимущества",
+        advantagesDesc: "Почему клиенты выбирают Eco Haus Meister",
+        adv1: "Полный цикл строительства",
+        adv1Desc: "От проектирования до сдачи объекта под ключ",
+        adv2: "Быстрое строительство",
+        adv2Desc: "Современные технологии позволяют сократить сроки",
+        adv3: "Экологичные материалы",
+        adv3Desc: "Безопасные и энергоэффективные решения",
+        adv4: "Оптимальная стоимость",
+        adv4Desc: "Лучшее соотношение цены и качества",
+        adv5: "Современные технологии",
+        adv5Desc: "Используем SIP и инновационные решения",
+        adv6: "Индивидуальный подход",
+        adv6Desc: "Учитываем все пожелания клиента"
     },
 
     en: {
@@ -72,7 +86,6 @@ const translations = {
         service3Desc: "Full construction cycle.",
         stagesTitle: "Construction Stages",
         stagesDesc: "Complete house construction process from idea to move-in",
-
         stage1: "Site preparation & foundation",
         stage1Desc: "Land leveling, excavation, concrete foundation",
         stage2: "Design & engineering",
@@ -90,7 +103,21 @@ const translations = {
         stage8: "Testing & inspection",
         stage8Desc: "System testing and final inspection",
         stage9: "Handover & move-in",
-        stage9Desc: "Keys delivery and documentation"
+        stage9Desc: "Keys delivery and documentation",
+        advantagesTitle: "Our Advantages",
+        advantagesDesc: "Why clients choose Eco Haus Meister",
+        adv1: "Full construction cycle",
+        adv1Desc: "From design to turnkey delivery",
+        adv2: "Fast construction",
+        adv2Desc: "Modern technologies reduce timelines",
+        adv3: "Eco-friendly materials",
+        adv3Desc: "Safe and energy-efficient solutions",
+        adv4: "Optimal pricing",
+        adv4Desc: "Best price-quality ratio",
+        adv5: "Modern technologies",
+        adv5Desc: "We use SIP and innovative solutions",
+        adv6: "Individual approach",
+        adv6Desc: "We consider all client needs"
     },
 
     ro: {
@@ -136,7 +163,21 @@ const translations = {
         stage8: "Testare și inspecție",
         stage8Desc: "Verificarea sistemelor",
         stage9: "Predare și mutare",
-        stage9Desc: "Predarea cheilor și documentelor"
+        stage9Desc: "Predarea cheilor și documentelor",
+        advantagesTitle: "Avantajele noastre",
+        advantagesDesc: "De ce clienții aleg Eco Haus Meister",
+        adv1: "Ciclu complet de construcție",
+        adv1Desc: "De la proiectare până la predare",
+        adv2: "Construcție rapidă",
+        adv2Desc: "Tehnologiile moderne reduc timpul",
+        adv3: "Materiale ecologice",
+        adv3Desc: "Soluții sigure și eficiente energetic",
+        adv4: "Cost optim",
+        adv4Desc: "Cel mai bun raport calitate-preț",
+        adv5: "Tehnologii moderne",
+        adv5Desc: "Folosim SIP și soluții inovatoare",
+        adv6: "Abordare individuală",
+        adv6Desc: "Ținem cont de toate cerințele clientului"
     },
 
     de: {
@@ -182,7 +223,21 @@ const translations = {
         stage8: "Prüfung & Inspektion",
         stage8Desc: "Systemtests und Kontrolle",
         stage9: "Übergabe & Einzug",
-        stage9Desc: "Schlüsselübergabe und Dokumente"
+        stage9Desc: "Schlüsselübergabe und Dokumente",
+        advantagesTitle: "Unsere Vorteile",
+        advantagesDesc: "Warum Kunden Eco Haus Meister wählen",
+        adv1: "Kompletter Bauzyklus",
+        adv1Desc: "Von der Planung bis zur schlüsselfertigen Übergabe",
+        adv2: "Schnelle Bauzeit",
+        adv2Desc: "Moderne Technologien verkürzen die Bauzeit",
+        adv3: "Umweltfreundliche Materialien",
+        adv3Desc: "Sichere und energieeffiziente Lösungen",
+        adv4: "Optimale Kosten",
+        adv4Desc: "Bestes Preis-Leistungs-Verhältnis",
+        adv5: "Moderne Technologien",
+        adv5Desc: "Wir nutzen SIP und innovative Lösungen",
+        adv6: "Individuelle Herangehensweise",
+        adv6Desc: "Wir berücksichtigen alle Kundenwünsche"
     }
 
 };
