@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/logo-header.png">
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -17,8 +18,9 @@
             <div class="flex items-center justify-between py-4">
 
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-[#3e2723] tracking-wide">
-                    Eco Haus Meister
+                <a href="index.html" class="flex items-center gap-3 text-2xl font-bold text-[#3e2723] tracking-wide">
+                    <img src="images/logo-header.png" alt="Logo" class="h-10 w-auto">
+                    <span>Eco Meister Haus </span>
                 </a>
 
                 <!-- Navigation -->
@@ -27,11 +29,11 @@
                         Услуги
                     </a>
 
-                    <a href="consruction_stages.html" data-key="stages" class="hover:text-[#3e2723] transition">
+                    <a href="construction_stages.html" data-key="stages" class="hover:text-[#3e2723] transition">
                         Этапы строительства
                     </a>
 
-                    <a href="adventages.html" data-key="advantages" class="hover:text-[#3e2723] transition">
+                    <a href="advantages.html" data-key="advantages" class="hover:text-[#3e2723] transition">
                         Преимущества
                     </a>
 
@@ -93,121 +95,89 @@
 
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </header>
-    
+
     <main class="py-20">
-        <div class="container mx-auto px-6 max-w-3xl text-center">
+        <div class="container mx-auto px-6">
 
             <!-- Title -->
-            <h2 class="text-3xl font-bold text-[#3e2723] mb-4" data-key="stagesTitle">
-                Этапы строительства
-            </h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#3e2723]" data-key="advantagesTitle">
+                    Наши преимущества
+                </h2>
 
-            <p class="text-gray-600 mb-12" data-key="stagesDesc">
-                Полный цикл строительства дома от идеи до заселения
-            </p>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto" data-key="advantagesDesc">
+                    Почему клиенты выбирают Eco Haus Meister
+                </p>
 
-            <!-- Timeline -->
-            <div class="space-y-8">
+            </div>
 
-                <!-- Step -->
-                <div class="bg-green-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage1">
-                        1. Подготовка участка и фундамент
+            <!-- Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Card -->
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv1">
+                        Полный цикл строительства
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage1Desc">
-                        Выравнивание участка, земляные работы, заливка фундамента
+                    <p class="text-gray-600 mt-3" data-key="adv1Desc">
+                        От проектирования до сдачи объекта под ключ
                     </p>
                 </div>
 
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-blue-800 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage2">
-                        2. Проектирование и инжиниринг
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv2">
+                        Быстрое строительство
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage2Desc">
-                        Архитектурный проект, расчёты и согласования
+                    <p class="text-gray-600 mt-3" data-key="adv2Desc">
+                        Современные технологии позволяют сократить сроки
                     </p>
                 </div>
 
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-teal-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage3">
-                        3. Производство SIP панелей
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv3">
+                        Экологичные материалы
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage3Desc">
-                        Изготовление стен, крыши и перекрытий
+                    <p class="text-gray-600 mt-3" data-key="adv3Desc">
+                        Безопасные и энергоэффективные решения
                     </p>
                 </div>
 
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-amber-800 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage4">
-                        4. Доставка и сборка
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv4">
+                        Оптимальная стоимость
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage4Desc">
-                        Монтаж конструкции дома на участке
+                    <p class="text-gray-600 mt-3" data-key="adv4Desc">
+                        Лучшее соотношение цены и качества
                     </p>
                 </div>
 
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-orange-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage5">
-                        5. Кровля и фасад
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv5">
+                        Современные технологии
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage5Desc">
-                        Установка крыши, окон и внешней отделки
+                    <p class="text-gray-600 mt-3" data-key="adv5Desc">
+                        Используем SIP и инновационные решения
                     </p>
                 </div>
 
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-purple-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage6">
-                        6. Инженерные системы
+                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv6">
+                        Индивидуальный подход
                     </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage6Desc">
-                        Электрика, отопление, водоснабжение
-                    </p>
-                </div>
-
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-pink-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage7">
-                        7. Внутренняя отделка
-                    </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage7Desc">
-                        Стены, полы, покраска и установка оборудования
-                    </p>
-                </div>
-
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-gray-700 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage8">
-                        8. Проверка и сдача
-                    </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage8Desc">
-                        Тестирование систем и финальный осмотр
-                    </p>
-                </div>
-
-                <div class="text-gray-400 text-2xl">↓</div>
-
-                <div class="bg-green-800 text-white p-6 rounded-xl shadow">
-                    <h3 class="text-xl font-semibold" data-key="stage9">
-                        9. Сдача и заселение
-                    </h3>
-                    <p class="text-sm opacity-90 mt-2" data-key="stage9Desc">
-                        Передача ключей и документации
+                    <p class="text-gray-600 mt-3" data-key="adv6Desc">
+                        Учитываем все пожелания клиента
                     </p>
                 </div>
 
@@ -215,7 +185,7 @@
         </div>
     </main>
 
-   <footer class="bg-amber-50 py-16">
+    <footer class="bg-amber-50 py-16">
         <div class="container mx-auto px-6">
 
             <div class="grid md:grid-cols-3 gap-12">
