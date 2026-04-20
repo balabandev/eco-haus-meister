@@ -79,7 +79,10 @@ const translations = {
         heroTitle2: "Современные SIP технологии",
         heroTitle3: "Надежные и энергоэффективные дома",
         aboutTitle: "О нашей компании",
-        aboutDesc: "Мы специализируемся на строительстве энергоэффективных домов по технологии SIP."
+        aboutDesc: "Мы специализируемся на строительстве энергоэффективных домов по технологии SIP.",
+        contact: "КОНТАКТНЫЕ ДАННЫЕ",
+        bank: "БАНКОВСКИЕ ДАННЫЕ",
+        social: "СОЦИАЛЬНЫЕ СЕТИ"
     },
 
     en: {
@@ -161,7 +164,10 @@ const translations = {
         heroTitle2: "Modern SIP technologies",
         heroTitle3: "Reliable and energy-efficient homes",
         aboutTitle: "About our company",
-        aboutDesc: "We specialize in building energy-efficient homes using SIP technology."
+        aboutDesc: "We specialize in building energy-efficient homes using SIP technology.",
+        contact: "CONTACT DETAILS",
+        bank: "BANK DETAILS",
+        social: "SOCIAL MEDIA",
     },
 
     ro: {
@@ -243,7 +249,10 @@ const translations = {
         heroTitle2: "Tehnologii SIP moderne",
         heroTitle3: "Case fiabile și eficiente energetic",
         aboutTitle: "Despre compania noastră",
-        aboutDesc: "Suntem specializați în construcția caselor eficiente energetic folosind tehnologia SIP."
+        aboutDesc: "Suntem specializați în construcția caselor eficiente energetic folosind tehnologia SIP.",
+        contact: "DATE DE CONTACT",
+        bank: "DATE BANCARE",
+        social: "REȚELE SOCIALE"
     },
 
     de: {
@@ -325,7 +334,10 @@ const translations = {
         heroTitle2: "Moderne SIP-Technologien",
         heroTitle3: "Zuverlässige und energieeffiziente Häuser",
         aboutTitle: "Über unser Unternehmen",
-        aboutDesc: "Wir sind auf den Bau energieeffizienter Häuser mit SIP-Technologie spezialisiert."
+        aboutDesc: "Wir sind auf den Bau energieeffizienter Häuser mit SIP-Technologie spezialisiert.",
+        contact: "KONTAKTDATEN",
+        bank: "BANKDATEN",
+        social: "SOZIALE MEDIEN"
     }
 
 };
