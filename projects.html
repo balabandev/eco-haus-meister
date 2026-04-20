@@ -11,121 +11,113 @@
 
     <title>Eco Meister Haus</title>
 </head>
-<body class="bg-white">
+<body class="bg-white min-h-screen flex flex-col">
 
-    <header class="bg-amber-50 shadow-md">
-        <div class="container mx-auto px-6">
+    <header class="bg-amber-50 sticky top-0 shadow-md z-50">
+        <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3 text-2xl font-bold text-[#3e2723] tracking-wide">
-                    <img src="images/logo-header.png" alt="Logo" class="h-10 w-auto">
-                    <span>Eco Meister Haus </span>
+                <a href="index.html" class="flex items-center gap-2 text-xl md:text-2xl font-bold text-[#3e2723]">
+                    <img src="images/logo-header.png" class="h-8 md:h-10">
+                    <span class="hidden sm:block">Eco Meister Haus</span>
                 </a>
 
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
                     <a href="services.html" data-key="services" class="hover:text-[#3e2723] transition">
                         Услуги
                     </a>
-
                     <a href="construction_stages.html" data-key="stages" class="hover:text-[#3e2723] transition">
                         Этапы строительства
                     </a>
-
                     <a href="advantages.html" data-key="advantages" class="hover:text-[#3e2723] transition">
                         Преимущества
                     </a>
-
                     <a href="projects.html" data-key="projects" class="hover:text-[#3e2723] transition">
                         Проекты
                     </a>
-
                     <a href="contacts.html" data-key="contacts" class="hover:text-[#3e2723] transition">
                         Контакты
                     </a>
                 </nav>
 
-                <!-- Right Side -->
-                <div class="flex items-center gap-4">
+                <!-- Right -->
+                <div class="flex items-center gap-3">
 
                     <!-- Language -->
-                    <div class="relative">
+                    <div class="relative hidden sm:block">
                         <button onclick="toggleLang()"
-                            class="flex items-center gap-2 bg-[#3e2723] text-white px-4 py-2 rounded-full hover:bg-[#5d4037] transition shadow">
-
+                            class="bg-[#3e2723] text-white px-3 py-2 rounded-full text-sm">
                             🌐 <span id="currentLang">Язык</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-4 h-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M19 9l-7 7-7-7"/>
-                            </svg>
-
                         </button>
 
-                        <!-- Dropdown -->
                         <div id="langMenu"
-                            class="hidden absolute right-0 mt-3 w-40 bg-white border rounded-xl shadow-lg overflow-hidden">
+                            class="hidden absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow">
 
                             <button onclick="setLang('ru')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Русский
                             </button>
 
                             <button onclick="setLang('ro')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Română
                             </button>
 
                             <button onclick="setLang('en')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 English
                             </button>
 
                             <button onclick="setLang('de')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Deutsch
                             </button>
 
                         </div>
                     </div>
 
+                    <!-- Burger -->
+                    <button onclick="toggleMenu()" class="md:hidden text-2xl">
+                        ☰
+                    </button>
                 </div>
+            </div>
 
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 pb-4 text-gray-700">
+                <a href="services.html" data-key="services">Услуги</a>
+                <a href="construction_stages.html" data-key="stages">Этапы</a>
+                <a href="advantages.html" data-key="advantages">Преимущества</a>
+                <a href="projects.html" data-key="projects">Проекты</a>
+                <a href="contacts.html" data-key="contacts">Контакты</a>
             </div>
         </div>
     </header>
 
-    <main class="py-20">
-        <div class="container mx-auto px-6">
+    <main class="flex-1 py-12 sm:py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-[#3e2723]" data-key="projectsTitle">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#3e2723]" data-key="projectsTitle">
                     Наши проекты
                 </h2>
 
-                <p class="text-gray-600 mt-3 max-w-2xl mx-auto" data-key="projectsDesc">
+                <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base" data-key="projectsDesc">
                     Ознакомьтесь с нашими реализованными проектами домов.
                 </p>
-
-                <div class="w-16 h-[2px] bg-green-600 mx-auto mt-4"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
                 <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                        class="h-56 w-full object-cover">
+                        class="h-48 sm:h-56 w-full object-cover">
 
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="project1">
+                    <div class="p-5">
+                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project1">
                             Современный дом
                         </h3>
 
@@ -134,7 +126,7 @@
                         </p>
 
                         <button onclick="openModal('projectModal1')"
-                            class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full transition"
+                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
                             data-key="viewProject">
                             Смотреть
                         </button>
@@ -142,12 +134,12 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
-                        class="h-56 w-full object-cover">
+                        class="h-48 sm:h-56 w-full object-cover">
 
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="project2">
+                    <div class="p-5">
+                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project2">
                             Загородный коттедж
                         </h3>
 
@@ -156,7 +148,7 @@
                         </p>
 
                         <button onclick="openModal('projectModal2')"
-                            class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full transition"
+                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
                             data-key="viewProject">
                             Смотреть
                         </button>
@@ -164,12 +156,12 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                        class="h-56 w-full object-cover">
+                        class="h-48 sm:h-56 w-full object-cover">
 
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="project3">
+                    <div class="p-5">
+                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project3">
                             Минималистичный дом
                         </h3>
 
@@ -178,7 +170,7 @@
                         </p>
 
                         <button onclick="openModal('projectModal3')"
-                            class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full transition"
+                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
                             data-key="viewProject">
                             Смотреть
                         </button>
@@ -186,12 +178,12 @@
                 </div>
 
                 <!-- Modal 1 -->
-                <div id="projectModal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-                    <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+                <div id="projectModal1" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
 
                         <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 text-xl">✕</button>
 
-                        <h3 class="text-2xl font-bold mb-4" data-key="project1">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project1">
                             Современный дом
                         </h3>
 
@@ -202,12 +194,12 @@
                 </div>
 
                 <!-- Modal 2 -->
-                <div id="projectModal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-                    <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+                <div id="projectModal2" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
 
                         <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 text-xl">✕</button>
 
-                        <h3 class="text-2xl font-bold mb-4" data-key="project2">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project2">
                             Загородный коттедж
                         </h3>
 
@@ -218,12 +210,12 @@
                 </div>
 
                 <!-- Modal 3 -->
-                <div id="projectModal3" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-                    <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
+                <div id="projectModal3" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
 
                         <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 text-xl">✕</button>
 
-                        <h3 class="text-2xl font-bold mb-4" data-key="project3">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project3">
                             Минималистичный дом
                         </h3>
 
@@ -237,82 +229,10 @@
         </div>
     </main>
     
-    <footer class="bg-amber-50 py-16">
-        <div class="container mx-auto px-6">
-
-            <div class="grid md:grid-cols-3 gap-12">
-
-                <!-- Contact -->
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        CONTACT DETAILS
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <p class="font-semibold">SIPEUROPE s.r.o</p>
-                    <p>Rastislavova 68/139</p>
-                    <p>951 41 Lužianky</p>
-                    <p>Mobile: +421 911 031 081</p>
-                    <p>E-mail: info@sipeurope.eu</p>
-                </div>
-
-
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        INVOICING
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <p>ID: 47 58 90 94</p>
-                    <p>EU VAT: SK 20 23 99 89 22</p>
-                    <p>BANK: Slovenská sporiteľňa, a. s.</p>
-                    <p>BIC SWIFT: GIBASKBX</p>
-                    <p>IBAN: SK22 0900 0000 0051 4006 7146</p>
-                </div>
-
-
-                <!-- Social -->
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        FOLLOW US
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <div class="flex gap-4">
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-[#3b0000] py-3">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
+            © 2026 Eco Haus Meister. All rights reserved.
         </div>
     </footer>
-
-    <div>
-        <div style="background-color: #3b0000; padding-top: 0.375rem; padding-bottom: 0.375rem;">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-center gap-8 text-sm text-white">
-                    <p>&copy; 2026 Eco Haus Meister. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

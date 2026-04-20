@@ -4,6 +4,7 @@ const translations = {
         lang: "Язык",
         services: "Услуги",
         stages: "Этапы строительства",
+        stagesDesc: "Полный цикл строительства дома от идеи до заселения",
         advantages: "Преимущества",
         projects: "Проекты",
         contacts: "Контакты",
@@ -85,6 +86,7 @@ const translations = {
         lang: "Language",
         services: "Services",
         stages: "Construction Stages",
+        stagesDesc: "Complete house construction process from idea to move-in",
         advantages: "Advantages",
         projects: "Projects",
         contacts: "Contacts",
@@ -166,6 +168,7 @@ const translations = {
         lang: "Limbă",
         services: "Servicii",
         stages: "Etapele construcției",
+        stagesDesc: "Proces complet de construcție a casei de la idee până la mutare",
         advantages: "Avantaje",
         projects: "Proiecte",
         contacts: "Contacte",
@@ -247,6 +250,7 @@ const translations = {
         lang: "Sprache",
         services: "Dienstleistungen",
         stages: "Bauphasen",
+        stagesDesc: "Kompletter Bauprozess vom Konzept bis zum Einzug",
         advantages: "Vorteile",
         projects: "Projekte",
         contacts: "Kontakte",
@@ -413,3 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showSlide(0);
 });
+
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+}

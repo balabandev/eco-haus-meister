@@ -11,172 +11,166 @@
 
     <title>Eco Meister Haus</title>
 </head>
-<body class="bg-white">
+<body class="bg-white min-h-screen flex flex-col">
 
-    <header class="bg-amber-50 shadow-md">
-        <div class="container mx-auto px-6">
+    <header class="bg-amber-50 sticky top-0 shadow-md z-50">
+        <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
 
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3 text-2xl font-bold text-[#3e2723] tracking-wide">
-                    <img src="images/logo-header.png" alt="Logo" class="h-10 w-auto">
-                    <span>Eco Meister Haus </span>
+                <a href="index.html" class="flex items-center gap-2 text-xl md:text-2xl font-bold text-[#3e2723]">
+                    <img src="images/logo-header.png" class="h-8 md:h-10">
+                    <span class="hidden sm:block">Eco Meister Haus</span>
                 </a>
 
-                <!-- Navigation -->
-                <nav class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
                     <a href="services.html" data-key="services" class="hover:text-[#3e2723] transition">
                         Услуги
                     </a>
-
                     <a href="construction_stages.html" data-key="stages" class="hover:text-[#3e2723] transition">
                         Этапы строительства
                     </a>
-
                     <a href="advantages.html" data-key="advantages" class="hover:text-[#3e2723] transition">
                         Преимущества
                     </a>
-
                     <a href="projects.html" data-key="projects" class="hover:text-[#3e2723] transition">
                         Проекты
                     </a>
-
                     <a href="contacts.html" data-key="contacts" class="hover:text-[#3e2723] transition">
                         Контакты
                     </a>
                 </nav>
 
-                <!-- Right Side -->
-                <div class="flex items-center gap-4">
+                <!-- Right -->
+                <div class="flex items-center gap-3">
 
                     <!-- Language -->
-                    <div class="relative">
+                    <div class="relative hidden sm:block">
                         <button onclick="toggleLang()"
-                            class="flex items-center gap-2 bg-[#3e2723] text-white px-4 py-2 rounded-full hover:bg-[#5d4037] transition shadow">
-
+                            class="bg-[#3e2723] text-white px-3 py-2 rounded-full text-sm">
                             🌐 <span id="currentLang">Язык</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-4 h-4"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M19 9l-7 7-7-7"/>
-                            </svg>
-
                         </button>
 
-                        <!-- Dropdown -->
                         <div id="langMenu"
-                            class="hidden absolute right-0 mt-3 w-40 bg-white border rounded-xl shadow-lg overflow-hidden">
+                            class="hidden absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow">
 
                             <button onclick="setLang('ru')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Русский
                             </button>
 
                             <button onclick="setLang('ro')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Română
                             </button>
 
                             <button onclick="setLang('en')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 English
                             </button>
 
                             <button onclick="setLang('de')"
-                                class="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
                                 Deutsch
                             </button>
 
                         </div>
                     </div>
 
+                    <!-- Burger -->
+                    <button onclick="toggleMenu()" class="md:hidden text-2xl">
+                        ☰
+                    </button>
                 </div>
+            </div>
 
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 pb-4 text-gray-700">
+                <a href="services.html" data-key="services">Услуги</a>
+                <a href="construction_stages.html" data-key="stages">Этапы</a>
+                <a href="advantages.html" data-key="advantages">Преимущества</a>
+                <a href="projects.html" data-key="projects">Проекты</a>
+                <a href="contacts.html" data-key="contacts">Контакты</a>
             </div>
         </div>
     </header>
 
-    <main class="py-20">
-        <div class="container mx-auto px-6">
+    <main class="py-12 md:py-24 flex-grow">
+        <div class="container mx-auto px-4 md:px-6">
 
             <!-- Title -->
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-[#3e2723]" data-key="advantagesTitle">
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="advantagesTitle">
                     Наши преимущества
                 </h2>
 
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto" data-key="advantagesDesc">
-                    Почему клиенты выбирают Eco Haus Meister
+                <p class="text-gray-600 mt-3 max-w-xl mx-auto text-sm md:text-base" data-key="advantagesDesc">
+                    Почему клиенты выбирают Eco Meister Haus 
                 </p>
 
             </div>
 
             <!-- Grid -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">🏗️</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv1">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">🏗️</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv1">
                         Полный цикл строительства
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv1Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv1Desc">
                         От проектирования до сдачи объекта под ключ
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv2">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">⚡</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv2">
                         Быстрое строительство
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv2Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv2Desc">
                         Современные технологии позволяют сократить сроки
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">🌱</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv3">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">🌱</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv3">
                         Экологичные материалы
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv3Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv3Desc">
                         Безопасные и энергоэффективные решения
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv4">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">💰</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv4">
                         Оптимальная стоимость
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv4Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv4Desc">
                         Лучшее соотношение цены и качества
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">🛠️</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv5">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">🛠️</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv5">
                         Современные технологии
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv5Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv5Desc">
                         Используем SIP и инновационные решения
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow hover:shadow-lg transition text-center">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-xl font-semibold text-[#3e2723]" data-key="adv6">
+                <div class="p-6 md:p-8 rounded-xl shadow text-center">
+                    <div class="text-3xl md:text-4xl mb-3">🤝</div>
+                    <h3 class="font-semibold text-[#3e2723]" data-key="adv6">
                         Индивидуальный подход
                     </h3>
-                    <p class="text-gray-600 mt-3" data-key="adv6Desc">
+                    <p class="text-gray-600 mt-2 text-sm" data-key="adv6Desc">
                         Учитываем все пожелания клиента
                     </p>
                 </div>
@@ -185,82 +179,10 @@
         </div>
     </main>
 
-    <footer class="bg-amber-50 py-16">
-        <div class="container mx-auto px-6">
-
-            <div class="grid md:grid-cols-3 gap-12">
-
-                <!-- Contact -->
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        CONTACT DETAILS
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <p class="font-semibold">SIPEUROPE s.r.o</p>
-                    <p>Rastislavova 68/139</p>
-                    <p>951 41 Lužianky</p>
-                    <p>Mobile: +421 911 031 081</p>
-                    <p>E-mail: info@sipeurope.eu</p>
-                </div>
-
-
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        INVOICING
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <p>ID: 47 58 90 94</p>
-                    <p>EU VAT: SK 20 23 99 89 22</p>
-                    <p>BANK: Slovenská sporiteľňa, a. s.</p>
-                    <p>BIC SWIFT: GIBASKBX</p>
-                    <p>IBAN: SK22 0900 0000 0051 4006 7146</p>
-                </div>
-
-
-                <!-- Social -->
-                <div>
-                    <h3 class="text-lg font-bold tracking-wide mb-4">
-                        FOLLOW US
-                    </h3>
-
-                    <div class="w-24 h-[2px] bg-white/40 mb-6"></div>
-
-                    <div class="flex gap-4">
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-
-                        <a href="#" class="w-12 h-12 flex items-center justify-center border border-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-[#3b0000] py-3 mt-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
+            © 2026 Eco Haus Meister. All rights reserved.
         </div>
     </footer>
-
-    <div>
-        <div style="background-color: #3b0000; padding-top: 0.375rem; padding-bottom: 0.375rem;">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-center gap-8 text-sm text-white">
-                    <p>&copy; 2026 Eco Haus Meister. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
