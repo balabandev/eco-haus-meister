@@ -343,83 +343,94 @@ const translations = {
 };
 
 function toggleLang() {
-    document.getElementById("langMenu").classList.toggle("hidden");
+    const menu = document.getElementById("langMenu");
+    if (menu) menu.classList.toggle("hidden");
 }
 
 function setLang(lang) {
-
-    document.getElementById("currentLang").innerText = translations[lang].lang;
+    const currentLangSpan = document.getElementById("currentLang");
+    if (currentLangSpan) currentLangSpan.innerText = translations[lang].lang;
 
     const elements = document.querySelectorAll("[data-key]");
-
     elements.forEach(el => {
         const key = el.getAttribute("data-key");
-
         if (translations[lang][key]) {
-        if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-            el.placeholder = translations[lang][key];
-        } else {
-            el.innerText = translations[lang][key];
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerText = translations[lang][key];
+            }
         }
-    }
     });
 
-    document.getElementById("langMenu").classList.add("hidden");
+    const langMenu = document.getElementById("langMenu");
+    if (langMenu) langMenu.classList.add("hidden");
 
     localStorage.setItem("lang", lang);
 }
 
 function openModal(id) {
-    document.getElementById(id).classList.remove("hidden");
-    document.getElementById(id).classList.add("flex");
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+    }
 }
 
 function closeModal(id) {
-    document.getElementById(id).classList.add("hidden");
+    const modal = document.getElementById(id);
+    if (modal) modal.classList.add("hidden");
 }
 
+function toggleMenu() {
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (mobileMenu) mobileMenu.classList.toggle("hidden");
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    // язык
+    // Язык
     const savedLang = localStorage.getItem("lang") || "ru";
     setLang(savedLang);
 
-    // слайдер
+    // === Слайдер ===
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
-
     const prevBtn = document.getElementById("prevSlide");
     const nextBtn = document.getElementById("nextSlide");
 
     function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.add("hidden");
+        // 1. Скрыть все слайды
+        slides.forEach(slide => slide.classList.add("hidden"));
 
-            dots[i].classList.remove("bg-white");
-            dots[i].classList.add("bg-white/50");
+        // 2. Сбросить стили у ВСЕХ точек (безопасно, даже если точек нет)
+        dots.forEach(dot => {
+            dot.classList.remove("bg-white");
+            dot.classList.add("bg-white/50");
         });
 
-        slides[index].classList.remove("hidden");
-        dots[index].classList.add("bg-white");
+        // 3. Показать нужный слайд
+        if (slides[index]) slides[index].classList.remove("hidden");
+
+        // 4. Активировать точку, если она существует
+        if (dots[index]) dots[index].classList.add("bg-white");
     }
 
     function nextSlide() {
+        if (slides.length === 0) return;
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }
 
     function prevSlide() {
+        if (slides.length === 0) return;
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         showSlide(currentSlide);
     }
 
-    // клики по стрелкам
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
+    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
 
-    // клики по точкам
     dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
             currentSlide = i;
@@ -427,33 +438,31 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    showSlide(0);
+    if (slides.length) showSlide(0);
 
+    // === Тач-свайп для мобильных ===
     const sliderEl = document.getElementById("slider");
-    let touchStartX = 0;
+    if (sliderEl) {
+        let touchStartX = 0;
 
-    // Скрыть кнопки на тач-устройствах
-    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-        if (prevBtn) prevBtn.style.display = "none";
-        if (nextBtn) nextBtn.style.display = "none";
-    }
-
-    sliderEl.addEventListener("touchstart", (e) => {
-        touchStartX = e.changedTouches[0].clientX;
-    }, { passive: true });
-
-    sliderEl.addEventListener("touchend", (e) => {
-        const delta = e.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(delta) < 50) return;
-        if (delta < 0) {
-            nextSlide();
-        } else {
-            prevSlide();
+        // Скрыть кнопки на тач-устройствах
+        if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+            if (prevBtn) prevBtn.style.display = "none";
+            if (nextBtn) nextBtn.style.display = "none";
         }
-    }, { passive: true });
 
+        sliderEl.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+        }, { passive: true });
+
+        sliderEl.addEventListener("touchend", (e) => {
+            const delta = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(delta) < 50) return;
+            if (delta < 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }, { passive: true });
+    }
 });
-
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("hidden");
-}
