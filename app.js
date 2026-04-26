@@ -428,6 +428,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     showSlide(0);
+
+    const sliderEl = document.getElementById("slider");
+    let touchStartX = 0;
+
+    // Скрыть кнопки на тач-устройствах
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+        if (prevBtn) prevBtn.style.display = "none";
+        if (nextBtn) nextBtn.style.display = "none";
+    }
+
+    sliderEl.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+
+    sliderEl.addEventListener("touchend", (e) => {
+        const delta = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) < 50) return;
+        if (delta < 0) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+    }, { passive: true });
+
 });
 
 function toggleMenu() {
