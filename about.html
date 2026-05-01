@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="images/logo-header.png">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Eco Meister Haus</title>
+</head>
+<body>
+    <header class="bg-amber-50 sticky top-0 shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 text-xl md:text-2xl font-bold text-[#3e2723]">
+                    <img src="images/logo-header.png" class="h-8 md:h-10">
+                    <span class="hidden sm:block">Eco Meister Haus</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+                    <a href="services.html" data-key="services" class="hover:text-[#3e2723] transition">
+                        Услуги
+                    </a>
+                    <a href="construction_stages.html" data-key="stages" class="hover:text-[#3e2723] transition">
+                        Этапы строительства
+                    </a>
+                    <a href="advantages.html" data-key="advantages" class="hover:text-[#3e2723] transition">
+                        Преимущества
+                    </a>
+                    <a href="projects.html" data-key="projects" class="hover:text-[#3e2723] transition">
+                        Проекты
+                    </a>
+                    <a href="contacts.html" data-key="contacts" class="hover:text-[#3e2723] transition">
+                        Контакты
+                    </a>
+                    <a href="about.html" data-key="about" class="hover:text-[#3e2723] transition">
+                        О Нас
+                    </a>
+                </nav>
+
+                <!-- Right -->
+                <div class="flex items-center gap-3">
+
+                    <!-- Language -->
+                    <div class="relative hidden sm:block">
+                        <button onclick="toggleLang()"
+                            class="bg-[#3e2723] text-white px-3 py-2 rounded-full text-sm">
+                            🌐 <span id="currentLang">Язык</span>
+                        </button>
+
+                        <div id="langMenu"
+                            class="hidden absolute right-0 mt-2 w-36 bg-white border rounded-lg shadow">
+
+                            <button onclick="setLang('ru')"
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
+                                Русский
+                            </button>
+
+                            <button onclick="setLang('ro')"
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
+                                Română
+                            </button>
+
+                            <button onclick="setLang('en')"
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
+                                English
+                            </button>
+
+                            <button onclick="setLang('de')"
+                                class="block w-full text-left px-3 py-2 hover:bg-gray-100">
+                                Deutsch
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Burger -->
+                    <button onclick="toggleMenu()" class="md:hidden text-2xl">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 pb-4 text-gray-700">
+                <a href="services.html" data-key="services">Услуги</a>
+                <a href="construction_stages.html" data-key="stages">Этапы</a>
+                <a href="advantages.html" data-key="advantages">Преимущества</a>
+                <a href="projects.html" data-key="projects">Проекты</a>
+                <a href="contacts.html" data-key="contacts">Контакты</a>
+                <a href="about.html" data-key="about">О Нас</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- HERO -->
+        <section class="relative h-[300px] md:h-[420px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"
+                role="img" aria-label="Современный дом Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/70"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="aboutHeroTitle">
+                    О компании
+                </h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="aboutHeroDesc">
+                    Строим современные, надёжные и энергоэффективные дома по европейским стандартам
+                </p>
+            </div>
+        </section>
+ 
+        <!-- ОСНОВНОЙ БЛОК О КОМПАНИИ -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-6" data-key="aboutCompanyTitle">
+                            Кто мы
+                        </h2>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4" data-key="aboutCompanyText1">
+                            Eco Meister Haus — это команда профессионалов в сфере строительства энергоэффективных домов. Мы работаем по технологии SIP и применяем современные европейские стандарты на каждом этапе — от проектирования до передачи ключей.
+                        </p>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="aboutCompanyText2">
+                            Наша цель — строить дома, в которых комфортно жить и выгодно содержать. Тёплые зимой, прохладные летом, долговечные и красивые.
+                        </p>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+                            class="w-full h-64 md:h-80 object-cover"
+                            alt="Команда Eco Meister Haus за работой над проектом дома">
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- КАЧЕСТВО / ЭКОЛОГИЧНОСТЬ / ЕВРОСТАНДАРТЫ -->
+        <section class="py-16 md:py-20 bg-[#f5f5f5]">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="aboutValuesTitle">
+                        Наши принципы
+                    </h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto" data-key="aboutValuesDesc">
+                        Качество, экологичность и европейские стандарты — в каждом проекте
+                    </p>
+                </div>
+ 
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf text-green-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val1Title">Экологичность</h3>
+                        <p class="text-gray-500 text-sm" data-key="val1Desc">
+                            Используем только безопасные, сертифицированные материалы без вредных выбросов
+                        </p>
+                    </div>
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-award text-amber-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val2Title">Качество</h3>
+                        <p class="text-gray-500 text-sm" data-key="val2Desc">
+                            Каждый этап проходит контроль качества. Мы не сдаём объект, пока не убедимся в его надёжности
+                        </p>
+                    </div>
+ 
+                    <div class="bg-white rounded-2xl p-7 shadow text-center">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-eu text-blue-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-bold text-[#3e2723] text-lg mb-2" data-key="val3Title">Европейские стандарты</h3>
+                        <p class="text-gray-500 text-sm" data-key="val3Desc">
+                            Строим в соответствии с европейскими нормами энергоэффективности и строительными регламентами
+                        </p>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- КАК МЫ РАБОТАЕМ -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="aboutApproachTitle">
+                        Наш подход
+                    </h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto" data-key="aboutApproachDesc">
+                        Как мы работаем с каждым клиентом
+                    </p>
+                </div>
+ 
+                <div class="grid md:grid-cols-2 gap-6">
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">1</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach1Title">Слушаем и понимаем</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach1Desc">Начинаем с детального разговора о ваших пожеланиях, бюджете и сроках. Никаких шаблонных решений.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">2</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach2Title">Проектируем под вас</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach2Desc">Разрабатываем индивидуальный проект с учётом вашего участка, климата и стиля жизни.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">3</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach3Title">Строим прозрачно</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach3Desc">Вы в курсе каждого этапа. Регулярные отчёты, фото с объекта, фиксированная смета без скрытых доплат.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="flex gap-5 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">4</div>
+                        <div>
+                            <h3 class="font-semibold text-[#3e2723] mb-1" data-key="approach4Title">Сдаём под ключ</h3>
+                            <p class="text-gray-500 text-sm" data-key="approach4Desc">Передаём готовый дом с полным пакетом документов и гарантией на выполненные работы.</p>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ТЕХНОЛОГИИ И МАТЕРИАЛЫ -->
+        <section class="py-16 md:py-20 bg-[#3e2723] text-white">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+                            class="w-full h-64 md:h-80 object-cover"
+                            alt="SIP панели — современная технология строительства энергоэффективных домов">
+                    </div>
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-6" data-key="aboutTechTitle">
+                            Технологии и материалы
+                        </h2>
+                        <p class="text-white/80 text-sm md:text-base leading-relaxed mb-4" data-key="aboutTechText1">
+                            В основе наших домов — технология SIP (Structural Insulated Panels). Это сэндвич-панели из OSB и пенополистирола, которые обеспечивают высокую теплоизоляцию, прочность и скорость строительства.
+                        </p>
+                        <p class="text-white/80 text-sm md:text-base leading-relaxed mb-6" data-key="aboutTechText2">
+                            Дом на SIP возводится в несколько раз быстрее кирпичного, при этом превосходит его по энергоэффективности. Затраты на отопление снижаются до 60%.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">−60%</div>
+                                <div class="text-white/70 text-xs" data-key="techStat1">затраты на отопление</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">3×</div>
+                                <div class="text-white/70 text-xs" data-key="techStat2">быстрее кирпичного дома</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">50+</div>
+                                <div class="text-white/70 text-xs" data-key="techStat3">лет срок службы</div>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-4 text-center">
+                                <div class="text-2xl font-bold mb-1">A+</div>
+                                <div class="text-white/70 text-xs" data-key="techStat4">класс энергоэффективности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-16 md:py-20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="aboutCtaTitle">
+                    Готовы построить дом вашей мечты?
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="aboutCtaDesc">
+                    Расскажите нам о вашем проекте — мы подберём оптимальное решение и рассчитаем стоимость
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacts.html"
+                        class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
+                        data-key="ctaContact">
+                        Получить консультацию
+                    </a>
+                    <a href="projects.html"
+                        class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition"
+                        data-key="ctaProjects">
+                        Смотреть проекты
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-[#3b0000] py-3 mt-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
+            © 2026 Eco Haus Meister. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
