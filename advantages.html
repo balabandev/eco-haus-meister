@@ -96,91 +96,193 @@
                 <a href="projects.html" data-key="projects">Проекты</a>
                 <a href="about.html" data-key="about">О Нас</a>
                 <a href="contacts.html" data-key="contacts">Контакты</a>
+
+                <div class="border-t pt-3">
+                    <p class="text-sm text-gray-500 mb-2">
+                        🌐 <span id="currentLangMobile">Язык</span>
+                    </p>
+
+                    <div class="flex flex-col gap-2">
+                        <button onclick="setLang('ru')" class="text-left">Русский</button>
+                        <button onclick="setLang('ro')" class="text-left">Română</button>
+                        <button onclick="setLang('en')" class="text-left">English</button>
+                        <button onclick="setLang('de')" class="text-left">Deutsch</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="py-12 md:py-24 flex-grow">
-        <div class="container mx-auto px-4 md:px-6">
-
-            <!-- Title -->
-            <div class="text-center mb-10 md:mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]" data-key="advantagesTitle">
+    <main class="flex-grow">
+ 
+        <!-- HERO -->
+        <section class="relative h-[260px] md:h-[340px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"
+                role="img" aria-label="Преимущества Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/72"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-3" data-key="advantagesTitle">
                     Наши преимущества
-                </h2>
-
-                <p class="text-gray-600 mt-3 max-w-xl mx-auto text-sm md:text-base" data-key="advantagesDesc">
-                    Почему клиенты выбирают Eco Meister Haus 
+                </h1>
+                <p class="text-white/75 text-sm md:text-lg max-w-xl" data-key="advantagesDesc">
+                    Почему клиенты выбирают Eco Meister Haus
                 </p>
-
             </div>
-
-            <!-- Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- Card -->
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">🏗️</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv1">
-                        Полный цикл строительства
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv1Desc">
-                        От проектирования до сдачи объекта под ключ
-                    </p>
-                </div>
-
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">⚡</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv2">
-                        Быстрое строительство
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv2Desc">
-                        Современные технологии позволяют сократить сроки
-                    </p>
-                </div>
-
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">🌱</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv3">
-                        Экологичные материалы
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv3Desc">
-                        Безопасные и энергоэффективные решения
-                    </p>
-                </div>
-
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">💰</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv4">
-                        Оптимальная стоимость
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv4Desc">
-                        Лучшее соотношение цены и качества
-                    </p>
-                </div>
-
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">🛠️</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv5">
-                        Современные технологии
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv5Desc">
-                        Используем SIP и инновационные решения
-                    </p>
-                </div>
-
-                <div class="p-6 md:p-8 rounded-xl shadow text-center">
-                    <div class="text-3xl md:text-4xl mb-3">🤝</div>
-                    <h3 class="font-semibold text-[#3e2723]" data-key="adv6">
-                        Индивидуальный подход
-                    </h3>
-                    <p class="text-gray-600 mt-2 text-sm" data-key="adv6Desc">
-                        Учитываем все пожелания клиента
-                    </p>
-                </div>
-
+        </section>
+ 
+        <!-- SEO INTRO -->
+        <section class="py-10 md:py-14 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="advIntro">
+                    Eco Meister Haus строит энергоэффективные дома по технологии SIP в соответствии с европейскими стандартами. Мы берём полную ответственность за каждый этап — от проекта до ключей — и предлагаем прозрачные условия без скрытых доплат.
+                </p>
             </div>
-        </div>
+        </section>
+ 
+        <!-- КАРТОЧКИ -->
+        <section class="py-14 md:py-20">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-person-digging text-amber-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv1">Полный цикл строительства</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv1Desc">От проектирования до сдачи объекта под ключ</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-bolt text-blue-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv2">Быстрое строительство</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv2Desc">Современные технологии позволяют сократить сроки в 2–3 раза</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf text-green-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv3">Экологичные материалы</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv3Desc">Сертифицированные материалы без вредных выбросов</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-coins text-yellow-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv4">Оптимальная стоимость</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv4Desc">Лучшее соотношение цены и качества на рынке</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-screwdriver-wrench text-purple-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv5">Современные технологии</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv5Desc">SIP-панели и инновационные инженерные решения</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-rose-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-handshake text-rose-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv6">Индивидуальный подход</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv6Desc">Учитываем все пожелания клиента без исключений</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-teal-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-fire-flame-simple text-teal-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv7">Энергоэффективность</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv7Desc">Класс A+ — затраты на отопление ниже до 60%</p>
+                    </div>
+ 
+                    <div class="p-6 md:p-8 rounded-2xl shadow hover:shadow-md transition text-center bg-white">
+                        <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-eu text-indigo-700 text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h2 class="font-bold text-[#3e2723] mb-2" data-key="adv8">Европейские стандарты</h2>
+                        <p class="text-gray-500 text-sm" data-key="adv8Desc">Строим по европейским нормам и используем сертифицированные материалы</p>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- FAQ -->
+        <section class="py-12 md:py-16 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8 text-center" data-key="advFaqTitle">
+                    Частые вопросы
+                </h2>
+                <div class="flex flex-col gap-3">
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq1Q">Насколько прочен SIP-дом по сравнению с кирпичным?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq1A">
+                            SIP-панели выдерживают нагрузки, сопоставимые с кирпичными стенами, а в ряде тестов на сжатие и сейсмостойкость превосходят их. Конструкция проверена десятилетиями эксплуатации в Европе и Северной Америке.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq2Q">Насколько SIP-дом энергоэффективен зимой?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq2A">
+                            Благодаря монолитному слою утеплителя без мостиков холода дом класса A+ потребляет на 50–60% меньше энергии на отопление, чем традиционный дом аналогичной площади.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="advFaq3Q">Соответствует ли строительство европейским нормам?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="advFaq3A">
+                            Да. Мы используем сертифицированные материалы и работаем в соответствии с европейскими строительными стандартами. Все панели проходят контроль качества до поставки на объект.
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-14 md:py-20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="advCtaTitle">
+                    Убедились в наших преимуществах?
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="advCtaDesc">
+                    Свяжитесь с нами — обсудим ваш проект и покажем, как эти преимущества работают именно для вас
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacts.html"
+                        class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
+                        data-key="ctaContact">
+                        Получить консультацию
+                    </a>
+                    <a href="projects.html"
+                        class="border border-[#3e2723] text-[#3e2723] px-8 py-3 rounded-full hover:bg-[#3e2723] hover:text-white transition"
+                        data-key="ctaProjects">
+                        Смотреть проекты
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
     </main>
 
     <footer class="bg-[#3b0000] py-3 mt-10">

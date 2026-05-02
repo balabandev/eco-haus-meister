@@ -214,7 +214,17 @@ const translations = {
         aboutCtaTitle: "Готовы построить дом вашей мечты?",
         aboutCtaDesc: "Расскажите нам о вашем проекте — мы подберём оптимальное решение и рассчитаем стоимость",
         bank: "БАНКОВСКИЕ ДАННЫЕ",
-        social: "СОЦИАЛЬНЫЕ СЕТИ"
+        social: "СОЦИАЛЬНЫЕ СЕТИ",
+        advIntro: "Eco Meister Haus строит энергоэффективные дома по технологии SIP в соответствии с европейскими стандартами. Мы берём полную ответственность за каждый этап — от проекта до ключей — и предлагаем прозрачные условия без скрытых доплат.",
+        advFaqTitle: "Частые вопросы",
+        advFaq1Q: "Насколько прочен SIP-дом по сравнению с кирпичным?",
+        advFaq1A: "SIP-панели выдерживают нагрузки, сопоставимые с кирпичными стенами, а в ряде тестов на сжатие и сейсмостойкость превосходят их. Конструкция проверена десятилетиями эксплуатации в Европе и Северной Америке.",
+        advFaq2Q: "Насколько SIP-дом энергоэффективен зимой?",
+        advFaq2A: "Благодаря монолитному слою утеплителя без мостиков холода дом класса A+ потребляет на 50–60% меньше энергии на отопление, чем традиционный дом аналогичной площади.",
+        advFaq3Q: "Соответствует ли строительство европейским нормам?",
+        advFaq3A: "Да. Мы используем сертифицированные материалы и работаем в соответствии с европейскими строительными стандартами. Все панели проходят контроль качества до поставки на объект.",
+        advCtaTitle: "Убедились в наших преимуществах?",
+        advCtaDesc: "Свяжитесь с нами — обсудим ваш проект и покажем, как эти преимущества работают именно для вас"
     },
  
     en: {
@@ -417,7 +427,17 @@ const translations = {
         aboutCtaTitle: "Ready to build your dream home?",
         aboutCtaDesc: "Tell us about your project — we'll find the optimal solution and calculate the cost",
         bank: "BANK DETAILS",
-        social: "SOCIAL MEDIA"
+        social: "SOCIAL MEDIA",
+        advIntro: "Eco Meister Haus builds energy-efficient homes using SIP technology in accordance with European standards. We take full responsibility for every stage — from design to keys — and offer transparent conditions with no hidden fees.",
+        advFaqTitle: "Frequently Asked Questions",
+        advFaq1Q: "How durable is a SIP house compared to a brick one?",
+        advFaq1A: "SIP panels withstand loads comparable to brick walls, and in some compression and seismic tests, they outperform them. The construction has been proven by decades of operation in Europe and North America.",
+        advFaq2Q: "How energy-efficient is a SIP house in winter?",
+        advFaq2A: "Thanks to the monolithic layer of insulation without cold bridges, an A+ class house consumes 50–60% less energy for heating than a traditional house of the same area.",
+        advFaq3Q: "Does the construction comply with European standards?",
+        advFaq3A: "Yes. We use certified materials and work in accordance with European construction standards. All panels undergo quality control before being delivered to the site.",
+        advCtaTitle: "Convinced of our advantages?",
+        advCtaDesc: "Contact us — we'll discuss your project and show how these advantages work specifically for you"
     },
  
     ro: {
@@ -594,7 +614,17 @@ const translations = {
         aboutCtaTitle: "Gata să construiți casa visurilor dvs.?",
         aboutCtaDesc: "Spuneți-ne despre proiectul dvs. — vom găsi soluția optimă și vom calcula costul",
         bank: "DATE BANCARE",
-        social: "REȚELE SOCIALE"
+        social: "REȚELE SOCIALE",
+        advIntro: "Eco Meister Haus construiește case eficiente energetic folosind tehnologia SIP în conformitate cu standardele europene. Ne asumăm responsabilitatea completă pentru fiecare etapă — de la proiectare până la chei — și oferim condiții transparente fără costuri ascunse.",
+        advFaqTitle: "Întrebări frecvente",
+        advFaq1Q: "Cât de durabilă este o casă SIP comparativ cu una din cărămidă?",
+        advFaq1A: "Panourile SIP rezistă la sarcini comparabile cu pereții din cărămidă și, în unele teste de compresie și seismice, le depășesc. Construcția a fost dovedită de decenii de operare în Europa și America de Nord.",
+        advFaq2Q: "Cât de eficientă energetic este o casă SIP iarna?",
+        advFaq2A: "Datorită stratului monolitic de izolație fără punți termice, o casă de clasa A+ consumă cu 50–60% mai puțină energie pentru încălzire decât o casă tradițională de aceeași suprafață.",
+        advFaq3Q: "Construcția respectă standardele europene?",
+        advFaq3A: "Da. Folosim materiale certificate și lucrăm în conformitate cu standardele europene de construcție. Toate panourile trec prin controlul calității înainte de a fi livrate pe șantier.",
+        advCtaTitle: "Convins de avantajele noastre?",
+        advCtaDesc: "Contactați-ne — vom discuta despre proiectul dvs. și vom arăta cum funcționează aceste avantaje specific pentru dvs."
     },
  
     de: {
@@ -771,7 +801,17 @@ const translations = {
         aboutCtaTitle: "Bereit, Ihr Traumhaus zu bauen?",
         aboutCtaDesc: "Erzählen Sie uns von Ihrem Projekt — wir finden die optimale Lösung und berechnen die Kosten",
         bank: "BANKDATEN",
-        social: "SOZIALE MEDIEN"
+        social: "SOZIALE MEDIEN",
+        advIntro: "Eco Meister Haus baut energieeffiziente Häuser mit SIP-Technologie nach europäischen Standards. Wir übernehmen die volle Verantwortung für jede Phase — von der Planung bis zu den Schlüsseln — und bieten transparente Bedingungen ohne versteckte Kosten.",
+        advFaqTitle: "Häufig gestellte Fragen",
+        advFaq1Q: "Wie langlebig ist ein SIP-Haus im Vergleich zu einem Ziegelhaus?",
+        advFaq1A: "SIP-Paneele halten Belastungen stand, die mit Ziegelwänden vergleichbar sind, und übertreffen sie in einigen Druck- und Erdbebentests. Die Konstruktion hat sich durch jahrzehntelangen Betrieb in Europa und Nordamerika bewährt.",
+        advFaq2Q: "Wie energieeffizient ist ein SIP-Haus im Winter?",
+        advFaq2A: "Dank der monolithischen Dämmschicht ohne Kältebrücken verbraucht ein Haus der Klasse A+ 50–60% weniger Energie für die Heizung als ein traditionelles Haus gleicher Fläche.",
+        advFaq3Q: "Entspricht die Konstruktion europäischen Standards?",
+        advFaq3A: "Ja. Wir verwenden zertifizierte Materialien und arbeiten gemäß den europäischen Bauvorschriften. Alle Paneele durchlaufen eine Qualitätskontrolle, bevor sie auf die Baustelle geliefert werden.",
+        advCtaTitle: "Überzeugt von unseren Vorteilen?",
+        advCtaDesc: "Kontaktieren Sie uns — wir besprechen Ihr Projekt und zeigen Ihnen, wie diese Vorteile genau für Sie funktionieren",
     }
 };
 
