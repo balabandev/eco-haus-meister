@@ -11,7 +11,8 @@
 
     <title>Eco Meister Haus</title>
 </head>
-<body>
+<body class="bg-white">
+
     <header class="bg-amber-50 sticky top-0 shadow-md z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
@@ -36,11 +37,11 @@
                     <a href="projects.html" data-key="projects" class="hover:text-[#3e2723] transition">
                         Проекты
                     </a>
-                    <a href="contacts.html" data-key="contacts" class="hover:text-[#3e2723] transition">
-                        Контакты
-                    </a>
                     <a href="about.html" data-key="about" class="hover:text-[#3e2723] transition">
                         О Нас
+                    </a>
+                    <a href="contacts.html" data-key="contacts" class="hover:text-[#3e2723] transition">
+                        Контакты
                     </a>
                 </nav>
 
@@ -93,8 +94,21 @@
                 <a href="construction_stages.html" data-key="stages">Этапы</a>
                 <a href="advantages.html" data-key="advantages">Преимущества</a>
                 <a href="projects.html" data-key="projects">Проекты</a>
-                <a href="contacts.html" data-key="contacts">Контакты</a>
                 <a href="about.html" data-key="about">О Нас</a>
+                <a href="contacts.html" data-key="contacts">Контакты</a>
+
+                <div class="border-t pt-3">
+                    <p class="text-sm text-gray-500 mb-2">
+                        🌐 <span id="currentLangMobile">Язык</span>
+                    </p>
+
+                    <div class="flex flex-col gap-2">
+                        <button onclick="setLang('ru')" class="text-left">Русский</button>
+                        <button onclick="setLang('ro')" class="text-left">Română</button>
+                        <button onclick="setLang('en')" class="text-left">English</button>
+                        <button onclick="setLang('de')" class="text-left">Deutsch</button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -305,7 +319,7 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 
     <footer class="bg-[#3b0000] py-3 mt-10">
