@@ -100,126 +100,190 @@
         </div>
     </header>
     
-    <main class="flex-grow py-20">
-        <div class="container mx-auto px-6 text-center">
-
-            <!-- Title -->
-            <h2 class="text-3xl font-bold text-[#3e2723] mb-4" data-key="servicesTitle">
-                Наши услуги
-            </h2>
-
-            <p class="text-gray-600 max-w-2xl mx-auto mb-12" data-key="servicesDesc">
-                Мы предоставляем комплексные услуги в сфере строительства.
-            </p>
-
-            <!-- Cards -->
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Card 1 -->
-                <div onclick="openModal('modal1')"
-                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
-
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
-                        class="rounded-t-xl h-48 w-full object-cover">
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service1">
-                            Проектирование
-                        </h3>
-
-                        <button class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full"
-                            data-key="learnMore">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div onclick="openModal('modal2')"
-                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
-
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
-                        class="rounded-t-xl h-48 w-full object-cover">
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service2">
-                            Инжиниринг
-                        </h3>
-
-                        <button class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full"
-                            data-key="learnMore">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div onclick="openModal('modal3')"
-                    class="bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
-
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
-                        class="rounded-t-xl h-48 w-full object-cover">
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-[#3e2723]" data-key="service3">
-                            Строительство
-                        </h3>
-
-                        <button class="mt-4 bg-gray-600 text-white px-4 py-2 rounded-full"
-                            data-key="learnMore">
-                            Подробнее
-                        </button>
-                    </div>
-                </div>
-
+    <main class="flex-grow">
+ 
+        <!-- HERO -->
+        <section class="relative h-[280px] md:h-[380px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')"
+                role="img" aria-label="Строительство домов Eco Meister Haus">
             </div>
-        </div>
-
-        
-
+            <div class="absolute inset-0 bg-[#3e2723]/70"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="servicesTitle">
+                    Наши услуги
+                </h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="servicesHeroDesc">
+                    Комплексные решения — от проекта до готового дома под ключ
+                </p>
+            </div>
+        </section>
+ 
+        <!-- INTRO TEXT для SEO -->
+        <section class="py-10 md:py-14 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4 text-center">
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="servicesIntro">
+                    Eco Meister Haus предоставляет полный спектр услуг в сфере строительства энергоэффективных домов. Мы работаем по технологии SIP и берём на себя весь процесс — от архитектурного проекта до финальной отделки и сдачи объекта.
+                </p>
+            </div>
+        </section>
+ 
+        <!-- КАРТОЧКИ УСЛУГ -->
+        <section class="py-14 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+ 
+                    <div onclick="openModal('modal1')"
+                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Архитектурное проектирование энергоэффективных домов">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-3xl mb-3" aria-hidden="true">📐</div>
+                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service1">Проектирование</h2>
+                            <p class="text-gray-500 text-sm mb-4" data-key="service1Short">
+                                Индивидуальный архитектурный проект под ваш участок и бюджет
+                            </p>
+                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
+                                Подробнее →
+                            </span>
+                        </div>
+                    </div>
+ 
+                    <div onclick="openModal('modal2')"
+                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Инженерные системы и коммуникации дома">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-3xl mb-3" aria-hidden="true">⚙️</div>
+                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service2">Инжиниринг</h2>
+                            <p class="text-gray-500 text-sm mb-4" data-key="service2Short">
+                                Электрика, отопление, вентиляция и водоснабжение — полный инженерный комплекс
+                            </p>
+                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
+                                Подробнее →
+                            </span>
+                        </div>
+                    </div>
+ 
+                    <div onclick="openModal('modal3')"
+                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Строительство дома под ключ по технологии SIP">
+                        </div>
+                        <div class="p-6">
+                            <div class="text-3xl mb-3" aria-hidden="true">🏠</div>
+                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service3">Строительство</h2>
+                            <p class="text-gray-500 text-sm mb-4" data-key="service3Short">
+                                Возводим дом от фундамента до ключей — быстро, надёжно, по фиксированной цене
+                            </p>
+                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
+                                Подробнее →
+                            </span>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- FAQ -->
+        <section class="py-12 md:py-16 bg-[#f5f5f5]">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8 text-center" data-key="faqTitle">
+                    Частые вопросы
+                </h2>
+                <div class="flex flex-col gap-3">
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="faq1Q">Сколько времени занимает строительство дома?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq1A">
+                            Дом по технологии SIP строится значительно быстрее традиционного. В среднем монтаж коробки занимает 2–4 недели, полный цикл строительства под ключ — от 3 до 6 месяцев в зависимости от сложности проекта.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="faq2Q">Можно ли изменить проект в процессе строительства?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq2A">
+                            Небольшие изменения возможны до начала производства SIP-панелей. После запуска в производство корректировки ограничены. Поэтому мы уделяем особое внимание финальному согласованию проекта.
+                        </div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)"
+                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span data-key="faq3Q">Даёте ли вы гарантию на построенный дом?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq3A">
+                            Да. Мы предоставляем гарантию на конструктив и все выполненные работы. Детальные условия обсуждаются при заключении договора.
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-14 md:py-20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="servicesCtaTitle">
+                    Нужна консультация?
+                </h2>
+                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="servicesCtaDesc">
+                    Расскажите о вашем проекте — мы ответим на все вопросы и подготовим предварительный расчёт
+                </p>
+                <a href="contacts.html"
+                    class="bg-[#3e2723] text-white px-10 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
+                    data-key="ctaContact">
+                    Получить консультацию
+                </a>
+            </div>
+        </section>
+ 
     </main>
-
-    <div id="modal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
-
-            <button onclick="closeModal('modal1')" class="absolute top-3 right-3 text-xl">✕</button>
-
-            <h3 class="text-2xl font-bold mb-4" data-key="service1">Проектирование</h3>
-
-            <p class="text-gray-600" data-key="service1Desc">
-                Мы создаем современные и эффективные проекты домов.
-            </p>
+ 
+    <!-- Модальные окна -->
+    <div id="modal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal1')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <div class="text-4xl mb-4" aria-hidden="true">📐</div>
+            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service1">Проектирование</h3>
+            <p class="text-gray-600 text-sm leading-relaxed" data-key="service1Desc">Мы создаем современные и эффективные проекты домов.</p>
         </div>
     </div>
-    <div id="modal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
-
-            <button onclick="closeModal('modal2')" class="absolute top-3 right-3 text-xl">✕</button>
-
-            <h3 class="text-2xl font-bold mb-4" data-key="service2">
-                Инжиниринг
-            </h3>
-
-            <p class="text-gray-600" data-key="service2Desc">
-                Комплексные инженерные решения.
-            </p>
+    <div id="modal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal2')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <div class="text-4xl mb-4" aria-hidden="true">⚙️</div>
+            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service2">Инжиниринг</h3>
+            <p class="text-gray-600 text-sm leading-relaxed" data-key="service2Desc">Комплексные инженерные решения.</p>
         </div>
     </div>
-    <div id="modal3" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-xl max-w-lg w-full relative">
-
-            <button onclick="closeModal('modal3')" class="absolute top-3 right-3 text-xl">✕</button>
-
-            <h3 class="text-2xl font-bold mb-4" data-key="service3">
-                Строительство
-            </h3>
-
-            <p class="text-gray-600" data-key="service3Desc">
-                Полный цикл строительства домов.
-            </p>
+    <div id="modal3" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
+        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal3')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <div class="text-4xl mb-4" aria-hidden="true">🏠</div>
+            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service3">Строительство</h3>
+            <p class="text-gray-600 text-sm leading-relaxed" data-key="service3Desc">Полный цикл строительства домов.</p>
         </div>
     </div>
-
+ 
     <footer class="bg-[#3b0000] py-3 mt-10">
         <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
             © 2026 Eco Haus Meister. All rights reserved.

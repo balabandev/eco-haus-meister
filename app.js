@@ -775,6 +775,7 @@ const translations = {
     }
 };
 
+
 function toggleLang() {
     const menu = document.getElementById("langMenu");
     if (menu) menu.classList.toggle("hidden");
@@ -901,3 +902,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: true });
     }
 });
+
+function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            answer.classList.toggle('hidden');
+            icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
+        }
