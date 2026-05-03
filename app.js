@@ -823,8 +823,16 @@ function toggleLang() {
 
 function setLang(lang) {
     const currentLangMobile = document.getElementById("currentLangMobile");
-    if (currentLangMobile && translations[lang]) {
-        currentLangMobile.innerText = translations[lang].lang;
+    const currentLang = document.getElementById("currentLang");
+
+    if (translations[lang]) {
+        if (currentLangMobile) {
+            currentLangMobile.innerText = translations[lang].lang;
+        }
+
+        if (currentLang) {
+            currentLang.innerText = translations[lang].lang;
+        }
     }
 
     const elements = document.querySelectorAll("[data-key]");

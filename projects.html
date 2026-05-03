@@ -100,138 +100,148 @@
         </div>
     </header>
 
-    <main class="flex-1 py-12 sm:py-16 md:py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-
-            <div class="text-center mb-10 md:mb-12">
-                <h2 class="text-2xl sm:text-3xl font-bold text-[#3e2723]" data-key="projectsTitle">
+    <main class="flex-grow">
+ 
+        <!-- HERO -->
+        <section class="relative h-[280px] md:h-[360px] overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"
+                role="img" aria-label="Проекты домов Eco Meister Haus">
+            </div>
+            <div class="absolute inset-0 bg-[#3e2723]/70"></div>
+            <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="projectsTitle">
                     Наши проекты
-                </h2>
-
-                <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base" data-key="projectsDesc">
+                </h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="projectsDesc">
                     Ознакомьтесь с нашими реализованными проектами домов.
                 </p>
             </div>
-
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-                <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                        class="h-48 sm:h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project1">
-                            Современный дом
-                        </h3>
-
-                        <p class="text-gray-600 mt-2 text-sm" data-key="project1Desc">
-                            Энергоэффективный дом с современным дизайном.
-                        </p>
-
-                        <button onclick="openModal('projectModal1')"
-                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
-                            data-key="viewProject">
-                            Смотреть
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
-                        class="h-48 sm:h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project2">
-                            Загородный коттедж
-                        </h3>
-
-                        <p class="text-gray-600 mt-2 text-sm" data-key="project2Desc">
-                            Уютный дом для семьи за городом.
-                        </p>
-
-                        <button onclick="openModal('projectModal2')"
-                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
-                            data-key="viewProject">
-                            Смотреть
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white rounded-xl shadow hover:shadow-xl transition overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
-                        class="h-48 sm:h-56 w-full object-cover">
-
-                    <div class="p-5">
-                        <h3 class="text-lg sm:text-xl font-semibold text-[#3e2723]" data-key="project3">
-                            Минималистичный дом
-                        </h3>
-
-                        <p class="text-gray-600 mt-2 text-sm" data-key="project3Desc">
-                            Стильный дом в современном минимализме.
-                        </p>
-
-                        <button onclick="openModal('projectModal3')"
-                            class="mt-4 w-full sm:w-auto bg-gray-700 text-white px-4 py-2 rounded-full transition"
-                            data-key="viewProject">
-                            Смотреть
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Modal 1 -->
-                <div id="projectModal1" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-
-                        <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 text-xl">✕</button>
-
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project1">
-                            Современный дом
-                        </h3>
-
-                        <p class="text-gray-600" data-key="project1Full">
-                            Полностью энергоэффективный дом с использованием SIP-панелей и современных технологий.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Modal 2 -->
-                <div id="projectModal2" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-
-                        <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 text-xl">✕</button>
-
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project2">
-                            Загородный коттедж
-                        </h3>
-
-                        <p class="text-gray-600" data-key="project2Full">
-                            Просторный коттедж с террасой и панорамными окнами.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Modal 3 -->
-                <div id="projectModal3" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-                    <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-
-                        <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 text-xl">✕</button>
-
-                        <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project3">
-                            Минималистичный дом
-                        </h3>
-
-                        <p class="text-gray-600" data-key="project3Full">
-                            Современный минимализм с функциональной планировкой.
-                        </p>
-                    </div>
-                </div>
-
+        </section>
+ 
+        <!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
+        <section class="py-6 bg-white border-b border-gray-100 sticky top-[72px] z-40">
+            <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-3 justify-center">
+                <a href="#modern" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catModern">Современные</a>
+                <a href="#country" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catCountry">Загородные</a>
+                <a href="#minimal" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catMinimal">Минимализм</a>
             </div>
-        </div>
+        </section>
+ 
+        <!-- КАТЕГОРИЯ: СОВРЕМЕННЫЕ -->
+        <section id="modern" class="py-14 md:py-20 bg-white scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catModernTitle">Современные дома</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+ 
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Современный энергоэффективный дом на SIP панелях">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project1">Современный дом</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project1Desc">Энергоэффективный дом с современным дизайном.</p>
+                            <button onclick="openModal('projectModal1')"
+                                class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition"
+                                data-key="viewProject">Смотреть</button>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- КАТЕГОРИЯ: ЗАГОРОДНЫЕ -->
+        <section id="country" class="py-14 md:py-20 bg-[#f5f5f5] scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catCountryTitle">Загородные дома</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+ 
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Загородный коттедж с террасой и панорамными окнами">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project2">Загородный коттедж</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project2Desc">Уютный дом для семьи за городом.</p>
+                            <button onclick="openModal('projectModal2')"
+                                class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition"
+                                data-key="viewProject">Смотреть</button>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- КАТЕГОРИЯ: МИНИМАЛИЗМ -->
+        <section id="minimal" class="py-14 md:py-20 bg-white scroll-mt-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catMinimalTitle">Минималистичные дома</h2>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+ 
+                    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
+                        <div class="relative overflow-hidden h-52">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                alt="Минималистичный дом в современном стиле">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold text-[#3e2723]" data-key="project3">Минималистичный дом</h3>
+                            <p class="text-gray-500 mt-2 text-sm" data-key="project3Desc">Стильный дом в современном минимализме.</p>
+                            <button onclick="openModal('projectModal3')"
+                                class="mt-4 bg-[#3e2723] text-white px-5 py-2 rounded-full text-sm hover:bg-[#5d4037] transition"
+                                data-key="viewProject">Смотреть</button>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- CTA -->
+        <section class="py-14 md:py-20 bg-[#f5f5f5]">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaProjectsTitle">
+                    Хотите такой же дом?
+                </h2>
+                <p class="text-gray-600 text-sm mb-6" data-key="ctaProjectsDesc">
+                    Обсудим ваш проект и подберём оптимальное решение
+                </p>
+                <a href="contacts.html" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg" data-key="ctaContact">
+                    Получить консультацию
+                </a>
+            </div>
+        </section>
+ 
     </main>
+
+    <!-- Модалки -->
+    <div id="projectModal1" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project1">Современный дом</h3>
+            <p class="text-gray-600" data-key="project1Full">Полностью энергоэффективный дом с использованием SIP-панелей и современных технологий.</p>
+        </div>
+    </div>
+    <div id="projectModal2" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project2">Загородный коттедж</h3>
+            <p class="text-gray-600" data-key="project2Full">Просторный коттедж с террасой и панорамными окнами.</p>
+        </div>
+    </div>
+    <div id="projectModal3" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project3">Минималистичный дом</h3>
+            <p class="text-gray-600" data-key="project3Full">Современный минимализм с функциональной планировкой.</p>
+        </div>
+    </div>
     
     <footer class="bg-[#3b0000] py-3">
         <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
