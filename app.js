@@ -816,25 +816,32 @@ const translations = {
 };
 
 
+
 function toggleLang() {
-    const menu = document.getElementById("langMenu");
-    if (menu) menu.classList.toggle("hidden");
+    document.getElementById("langMenu").classList.toggle("hidden");
 }
-
+ 
+function toggleLangMobile() {
+    const m = document.getElementById("langMenuMobile");
+    if (m) m.classList.toggle("hidden");
+}
+ 
+function setLangBoth(lang) {
+    setLang(lang);
+    const m = document.getElementById("langMenuMobile");
+    if (m) m.classList.add("hidden");
+    const shortNames = { ru: "RU", ro: "RO", en: "EN", de: "DE" };
+    const mob = document.getElementById("currentLangMobile");
+    if (mob) mob.innerText = shortNames[lang] || lang.toUpperCase();
+}
+ 
 function setLang(lang) {
-    const currentLangMobile = document.getElementById("currentLangMobile");
-    const currentLang = document.getElementById("currentLang");
-
-    if (translations[lang]) {
-        if (currentLangMobile) {
-            currentLangMobile.innerText = translations[lang].lang;
-        }
-
-        if (currentLang) {
-            currentLang.innerText = translations[lang].lang;
-        }
-    }
-
+    const shortNames = { ru: "RU", ro: "RO", en: "EN", de: "DE" };
+    const el = document.getElementById("currentLang");
+    if (el) el.innerText = translations[lang].lang;
+    const mob = document.getElementById("currentLangMobile");
+    if (mob) mob.innerText = shortNames[lang] || lang.toUpperCase();
+ 
     const elements = document.querySelectorAll("[data-key]");
     elements.forEach(el => {
         const key = el.getAttribute("data-key");
@@ -846,114 +853,213 @@ function setLang(lang) {
             }
         }
     });
-
-    const langMenu = document.getElementById("langMenu");
-    if (langMenu) langMenu.classList.add("hidden");
-
+    document.getElementById("langMenu").classList.add("hidden");
+    const lm = document.getElementById("langMenuMobile");
+    if (lm) lm.classList.add("hidden");
     localStorage.setItem("lang", lang);
 }
-
-function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
+ 
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const b1 = document.getElementById("burger1");
+    const b2 = document.getElementById("burger2");
+    const b3 = document.getElementById("burger3");
+    const isOpen = menu.dataset.open === "true";
+ 
+    if (!isOpen) {
+        // Открываем
+        menu.classList.remove("hidden");
+        menu.style.maxHeight = "0px";
+        menu.style.opacity = "0";
+        menu.style.overflow = "hidden";
+        menu.style.transition = "max-height 0.35s ease, opacity 0.25s ease";
+        // Запускаем через один кадр чтобы transition сработал
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+                menu.style.opacity = "1";
+            });
+        });
+        menu.dataset.open = "true";
+        if (b1) b1.style.transform = "translateY(8px) rotate(45deg)";
+        if (b2) b2.style.opacity = "0";
+        if (b3) b3.style.transform = "translateY(-8px) rotate(-45deg)";
+    } else {
+        // Закрываем
+        menu.style.maxHeight = "0px";
+        menu.style.opacity = "0";
+        menu.dataset.open = "false";
+        if (b1) b1.style.transform = "";
+        if (b2) b2.style.opacity = "";
+        if (b3) b3.style.transform = "";
+        // Прячем после окончания анимации
+        setTimeout(() => {
+            menu.classList.add("hidden");
+            menu.style.maxHeight = "";
+            menu.style.opacity = "";
+            menu.style.transition = "";
+        }, 350);
     }
 }
-
-function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.classList.add("hidden");
+ 
+function toggleLang() {
+    document.getElementById("langMenu").classList.toggle("hidden");
 }
-
+ 
+function toggleLangMobile() {
+    const m = document.getElementById("langMenuMobile");
+    if (m) m.classList.toggle("hidden");
+}
+ 
+function setLangBoth(lang) {
+    setLang(lang);
+    const m = document.getElementById("langMenuMobile");
+    if (m) m.classList.add("hidden");
+    const shortNames = { ru: "RU", ro: "RO", en: "EN", de: "DE" };
+    const mob = document.getElementById("currentLangMobile");
+    if (mob) mob.innerText = shortNames[lang] || lang.toUpperCase();
+}
+ 
+function setLang(lang) {
+    const shortNames = { ru: "RU", ro: "RO", en: "EN", de: "DE" };
+    const el = document.getElementById("currentLang");
+    if (el) el.innerText = translations[lang].lang;
+    const mob = document.getElementById("currentLangMobile");
+    if (mob) mob.innerText = shortNames[lang] || lang.toUpperCase();
+ 
+    const elements = document.querySelectorAll("[data-key]");
+    elements.forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerText = translations[lang][key];
+            }
+        }
+    });
+    document.getElementById("langMenu").classList.add("hidden");
+    const lm = document.getElementById("langMenuMobile");
+    if (lm) lm.classList.add("hidden");
+    localStorage.setItem("lang", lang);
+}
+ 
 function toggleMenu() {
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (mobileMenu) mobileMenu.classList.toggle("hidden");
+    const menu = document.getElementById("mobileMenu");
+    const b1 = document.getElementById("burger1");
+    const b2 = document.getElementById("burger2");
+    const b3 = document.getElementById("burger3");
+    const isOpen = menu.dataset.open === "true";
+ 
+    if (!isOpen) {
+        // Открываем
+        menu.classList.remove("hidden");
+        menu.style.maxHeight = "0px";
+        menu.style.opacity = "0";
+        menu.style.overflow = "hidden";
+        menu.style.transition = "max-height 0.35s ease, opacity 0.25s ease";
+        // Запускаем через один кадр чтобы transition сработал
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+                menu.style.opacity = "1";
+            });
+        });
+        menu.dataset.open = "true";
+        if (b1) b1.style.transform = "translateY(8px) rotate(45deg)";
+        if (b2) b2.style.opacity = "0";
+        if (b3) b3.style.transform = "translateY(-8px) rotate(-45deg)";
+    } else {
+        // Закрываем
+        menu.style.maxHeight = "0px";
+        menu.style.opacity = "0";
+        menu.dataset.open = "false";
+        if (b1) b1.style.transform = "";
+        if (b2) b2.style.opacity = "";
+        if (b3) b3.style.transform = "";
+        // Прячем после окончания анимации
+        setTimeout(() => {
+            menu.classList.add("hidden");
+            menu.style.maxHeight = "";
+            menu.style.opacity = "";
+            menu.style.transition = "";
+        }, 350);
+    }
 }
-
+ 
+function openModal(id) {
+    document.getElementById(id).classList.remove("hidden");
+    document.getElementById(id).classList.add("flex");
+}
+ 
+function closeModal(id) {
+    document.getElementById(id).classList.add("hidden");
+    document.getElementById(id).classList.remove("flex");
+}
+ 
 document.addEventListener("DOMContentLoaded", () => {
-    // Язык
-    const savedLang = localStorage.getItem("lang") || "ru";
+    const savedLang = localStorage.getItem("lang") || "de";
     setLang(savedLang);
-
-    // === Слайдер ===
+ 
+    // Показываем страницу после применения языка — убирает мигание
+    document.documentElement.style.visibility = '';
+ 
+    // Закрывать меню при клике вне
+    document.addEventListener("click", (e) => {
+        const langMenu = document.getElementById("langMenu");
+        const langMenuMobile = document.getElementById("langMenuMobile");
+        if (langMenu && !e.target.closest("[onclick='toggleLang()']") && !e.target.closest("#langMenu")) {
+            langMenu.classList.add("hidden");
+        }
+        if (langMenuMobile && !e.target.closest("[onclick='toggleLangMobile()']") && !e.target.closest("#langMenuMobile")) {
+            langMenuMobile.classList.add("hidden");
+        }
+    });
+ 
+    // Слайдер — только на главной
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
     const prevBtn = document.getElementById("prevSlide");
     const nextBtn = document.getElementById("nextSlide");
-
-    function showSlide(index) {
-        // 1. Скрыть все слайды
-        slides.forEach(slide => slide.classList.add("hidden"));
-
-        // 2. Сбросить стили у ВСЕХ точек (безопасно, даже если точек нет)
-        dots.forEach(dot => {
-            dot.classList.remove("bg-white");
-            dot.classList.add("bg-white/50");
-        });
-
-        // 3. Показать нужный слайд
-        if (slides[index]) slides[index].classList.remove("hidden");
-
-        // 4. Активировать точку, если она существует
-        if (dots[index]) dots[index].classList.add("bg-white");
-    }
-
-    function nextSlide() {
-        if (slides.length === 0) return;
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        if (slides.length === 0) return;
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-
-    dots.forEach((dot, i) => {
-        dot.addEventListener("click", () => {
-            currentSlide = i;
-            showSlide(i);
-        });
-    });
-
-    if (slides.length) showSlide(0);
-
-    // === Тач-свайп для мобильных ===
-    const sliderEl = document.getElementById("slider");
-    if (sliderEl) {
-        let touchStartX = 0;
-
-        // Скрыть кнопки на тач-устройствах
-        if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-            if (prevBtn) prevBtn.style.display = "none";
-            if (nextBtn) nextBtn.style.display = "none";
-        }
-
-        sliderEl.addEventListener("touchstart", (e) => {
-            touchStartX = e.changedTouches[0].clientX;
-        }, { passive: true });
-
-        sliderEl.addEventListener("touchend", (e) => {
-            const delta = e.changedTouches[0].clientX - touchStartX;
-            if (Math.abs(delta) < 50) return;
-            if (delta < 0) {
-                nextSlide();
-            } else {
-                prevSlide();
+ 
+    if (slides.length > 0 && prevBtn && nextBtn) {
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.add("hidden");
+                if (dots[i]) {
+                    dots[i].classList.remove("bg-white");
+                    dots[i].classList.add("bg-white/50");
+                }
+            });
+            slides[index].classList.remove("hidden");
+            if (dots[index]) {
+                dots[index].classList.add("bg-white");
+                dots[index].classList.remove("bg-white/50");
             }
-        }, { passive: true });
+        }
+ 
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+ 
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+ 
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+ 
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                currentSlide = i;
+                showSlide(i);
+            });
+        });
+ 
+        showSlide(0);
+        setInterval(nextSlide, 5000);
     }
 });
-
-function toggleFaq(btn) {
-            const answer = btn.nextElementSibling;
-            const icon = btn.querySelector('.faq-icon');
-            answer.classList.toggle('hidden');
-            icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
-        }
