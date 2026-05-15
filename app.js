@@ -1063,3 +1063,44 @@ document.addEventListener("DOMContentLoaded", () => {
         setInterval(nextSlide, 5000);
     }
 });
+
+const galleryState = {};
+ 
+        function galleryNext(id, total) {
+            if (!galleryState[id]) galleryState[id] = 0;
+            galleryState[id] = (galleryState[id] + 1) % total;
+            updateGallery(id, total);
+        }
+ 
+        function galleryPrev(id, total) {
+            if (!galleryState[id]) galleryState[id] = 0;
+            galleryState[id] = (galleryState[id] - 1 + total) % total;
+            updateGallery(id, total);
+        }
+ 
+        function updateGallery(id, total) {
+            const track = document.getElementById(id);
+            const idx = galleryState[id];
+            track.style.transform = `translateX(-${idx * 100}%)`;
+ 
+            // Обновить точки
+            const num = id.replace('gallery', '');
+            const dotsEl = document.getElementById('dots' + num);
+            if (dotsEl) {
+                dotsEl.querySelectorAll('span').forEach((dot, i) => {
+                    dot.className = i === idx
+                        ? 'w-2 h-2 rounded-full bg-white block'
+                        : 'w-2 h-2 rounded-full bg-white/50 block';
+                });
+            }
+        }
+ 
+        // Закрывать модалку по клику на фон
+        document.querySelectorAll('.fixed.inset-0').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }
+            });
+        });

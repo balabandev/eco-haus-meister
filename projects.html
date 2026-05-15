@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="images/logo-header.png">
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ 
     <title>Eco Meister Haus</title>
+    <script src="lang-init.js"></script>
 </head>
 <body class="bg-white min-h-screen flex flex-col">
-
+ 
     <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-shadow duration-300" id="siteHeader">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="flex items-center justify-between h-16 md:h-18">
@@ -36,8 +37,6 @@
  
                 <!-- Правая часть -->
                 <div class="flex items-center gap-2">
- 
-                    <!-- Язык -->
                     <div class="relative hidden sm:block">
                         <button onclick="toggleLang()"
                             class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-amber-50 hover:text-[#3e2723] transition-colors duration-200">
@@ -45,24 +44,18 @@
                             <span id="currentLang" class="font-medium">Язык</span>
                             <i class="fa-solid fa-chevron-down text-xs opacity-50" aria-hidden="true"></i>
                         </button>
-                        <div id="langMenu"
-                            class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                        <div id="langMenu" class="hidden absolute right-0 mt-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
                             <button onclick="setLang('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇺 Русский</button>
                             <button onclick="setLang('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇷🇴 Română</button>
                             <button onclick="setLang('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇬🇧 English</button>
                             <button onclick="setLang('de')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50 hover:text-[#3e2723] transition-colors">🇩🇪 Deutsch</button>
                         </div>
                     </div>
- 
-                    <!-- CTA кнопка (desktop) -->
                     <a href="contacts.html" data-key="contacts"
                         class="hidden lg:inline-flex items-center gap-2 bg-[#3e2723] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#5d4037] transition-colors duration-200">
                         Контакты
                     </a>
- 
-                    <!-- Бургер (mobile) -->
-                    <button onclick="toggleMenu()"
-                        id="burgerBtn"
+                    <button onclick="toggleMenu()" id="burgerBtn"
                         class="lg:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 rounded-lg hover:bg-amber-50 transition-colors"
                         aria-label="Открыть меню">
                         <span class="block w-5 h-0.5 bg-[#3e2723] rounded transition-all duration-300" id="burger1"></span>
@@ -74,48 +67,30 @@
         </div>
  
         <!-- Mobile Menu -->
-        <div id="mobileMenu"
-            class="hidden lg:hidden border-t border-gray-100 bg-white">
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white">
             <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-                <a href="services.html" data-key="services"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    Услуги
+                <a href="services.html" data-key="services" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-screwdriver-wrench w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Услуги
                 </a>
-                <a href="construction_stages.html" data-key="stages"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    Этапы строительства
+                <a href="construction_stages.html" data-key="stages" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-list-check w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Этапы строительства
                 </a>
-                <a href="advantages.html" data-key="advantages"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    Преимущества
+                <a href="advantages.html" data-key="advantages" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-star w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Преимущества
                 </a>
-                <a href="about.html" data-key="about"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    О компании
+                <a href="about.html" data-key="about" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-building w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>О компании
                 </a>
-                <a href="projects.html" data-key="projects"
-                    class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
-                    <i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>
-                    Проекты
+                <a href="projects.html" data-key="projects" class="flex items-center gap-3 px-3 py-3 rounded-xl text-gray-700 hover:bg-amber-50 hover:text-[#3e2723] transition-colors font-medium text-sm">
+                    <i class="fa-solid fa-house w-4 text-center text-[#3e2723]/50" aria-hidden="true"></i>Проекты
                 </a>
                 <div class="mt-2 pt-3 border-t border-gray-100 flex items-center justify-between gap-3">
-                    <a href="contacts.html" data-key="contacts"
-                        class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">
-                        Контакты
-                    </a>
-                    <!-- Язык на мобиле -->
+                    <a href="contacts.html" data-key="contacts" class="flex-1 text-center bg-[#3e2723] text-white text-sm font-medium px-4 py-3 rounded-xl hover:bg-[#5d4037] transition-colors">Контакты</a>
                     <div class="relative">
-                        <button onclick="toggleLangMobile()"
-                            class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
-                            <span>🌐</span>
-                            <span id="currentLangMobile" class="font-medium">RU</span>
+                        <button onclick="toggleLangMobile()" class="flex items-center gap-1.5 px-3 py-3 rounded-xl text-sm text-gray-600 border border-gray-200 hover:border-[#3e2723] transition-colors">
+                            <span>🌐</span><span id="currentLangMobile" class="font-medium">DE</span>
                         </button>
-                        <div id="langMenuMobile"
-                            class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
+                        <div id="langMenuMobile" class="hidden absolute right-0 bottom-full mb-1 w-36 bg-white border border-gray-100 rounded-xl shadow-lg overflow-hidden">
                             <button onclick="setLangBoth('ru')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇺 Русский</button>
                             <button onclick="setLangBoth('ro')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇷🇴 Română</button>
                             <button onclick="setLangBoth('en')" class="flex items-center gap-2 w-full text-left px-4 py-2.5 text-sm hover:bg-amber-50">🇬🇧 English</button>
@@ -126,7 +101,7 @@
             </div>
         </div>
     </header>
-
+ 
     <main class="flex-grow">
  
         <!-- HERO -->
@@ -137,17 +112,13 @@
             </div>
             <div class="absolute inset-0 bg-[#3e2723]/70"></div>
             <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
-                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="projectsTitle">
-                    Наши проекты
-                </h1>
-                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="projectsDesc">
-                    Ознакомьтесь с нашими реализованными проектами домов.
-                </p>
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="projectsTitle">Наши проекты</h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="projectsDesc">Ознакомьтесь с нашими реализованными проектами домов.</p>
             </div>
         </section>
  
         <!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
-        <section class="py-6 bg-white border-b border-gray-100 sticky top-[72px] z-40">
+        <section class="py-6 bg-white border-b border-gray-100 sticky top-[64px] z-40">
             <div class="max-w-7xl mx-auto px-4 flex flex-wrap gap-3 justify-center">
                 <a href="#modern" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catModern">Современные</a>
                 <a href="#country" class="px-5 py-2 rounded-full border border-[#3e2723] text-[#3e2723] text-sm font-medium hover:bg-[#3e2723] hover:text-white transition" data-key="catCountry">Загородные</a>
@@ -160,7 +131,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catModernTitle">Современные дома</h2>
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
- 
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div class="relative overflow-hidden h-52">
                             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
@@ -175,7 +145,6 @@
                                 data-key="viewProject">Смотреть</button>
                         </div>
                     </div>
- 
                 </div>
             </div>
         </section>
@@ -185,7 +154,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catCountryTitle">Загородные дома</h2>
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
- 
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div class="relative overflow-hidden h-52">
                             <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
@@ -200,7 +168,6 @@
                                 data-key="viewProject">Смотреть</button>
                         </div>
                     </div>
- 
                 </div>
             </div>
         </section>
@@ -210,7 +177,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8" data-key="catMinimalTitle">Минималистичные дома</h2>
                 <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
- 
                     <div class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden group">
                         <div class="relative overflow-hidden h-52">
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
@@ -225,7 +191,6 @@
                                 data-key="viewProject">Смотреть</button>
                         </div>
                     </div>
- 
                 </div>
             </div>
         </section>
@@ -233,40 +198,142 @@
         <!-- CTA -->
         <section class="py-14 md:py-20 bg-[#f5f5f5]">
             <div class="max-w-2xl mx-auto px-4 text-center">
-                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaProjectsTitle">
-                    Хотите такой же дом?
-                </h2>
-                <p class="text-gray-600 text-sm mb-6" data-key="ctaProjectsDesc">
-                    Обсудим ваш проект и подберём оптимальное решение
-                </p>
-                <a href="contacts.html" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg" data-key="ctaContact">
-                    Получить консультацию
-                </a>
+                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-3" data-key="ctaProjectsTitle">Хотите такой же дом?</h2>
+                <p class="text-gray-600 text-sm mb-6" data-key="ctaProjectsDesc">Обсудим ваш проект и подберём оптимальное решение</p>
+                <a href="contacts.html" class="bg-[#3e2723] text-white px-8 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg" data-key="ctaContact">Получить консультацию</a>
             </div>
         </section>
  
     </main>
-
-    <!-- Модалки -->
-    <div id="projectModal1" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project1">Современный дом</h3>
-            <p class="text-gray-600" data-key="project1Full">Полностью энергоэффективный дом с использованием SIP-панелей и современных технологий.</p>
+ 
+    <!-- МОДАЛКА 1 — Современный дом -->
+    <div id="projectModal1" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl">
+ 
+            <!-- Галерея -->
+            <div class="relative">
+                <div class="gallery-track flex transition-transform duration-400 rounded-t-2xl overflow-hidden" id="gallery1">
+                    <img src="images/project1-photo1.jpg" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Современный дом">
+                    <img src="images/project1-photo2.jpg" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Современный дом ">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Современный дом">
+                </div>
+                <!-- Стрелки галереи -->
+                <button onclick="galleryPrev('gallery1', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Предыдущее фото">‹</button>
+                <button onclick="galleryNext('gallery1', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Следующее фото">›</button>
+                <!-- Точки -->
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" id="dots1">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <!-- Закрыть -->
+                <button onclick="closeModal('projectModal1')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm" aria-label="Закрыть">✕</button>
+            </div>
+ 
+            <!-- Текст -->
+            <div class="p-6 md:p-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project1">Современный дом</h3>
+                <p class="text-gray-600 text-sm leading-relaxed" data-key="project1Full">Полностью энергоэффективный дом с использованием SIP-панелей и современных технологий.</p>
+                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">150 м²</div>
+                        <div class="text-gray-400 text-xs mt-0.5">площадь</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">4 мес.</div>
+                        <div class="text-gray-400 text-xs mt-0.5">срок</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">A+</div>
+                        <div class="text-gray-400 text-xs mt-0.5">класс</div>
+                    </div>
+                </div>
+                <a href="contacts.html" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Получить консультацию</a>
+            </div>
         </div>
     </div>
-    <div id="projectModal2" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project2">Загородный коттедж</h3>
-            <p class="text-gray-600" data-key="project2Full">Просторный коттедж с террасой и панорамными окнами.</p>
+ 
+    <!-- МОДАЛКА 2 — Загородный коттедж -->
+    <div id="projectModal2" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl">
+ 
+            <div class="relative">
+                <div class="gallery-track flex transition-transform duration-400 rounded-t-2xl overflow-hidden" id="gallery2">
+                    <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Загородный коттедж — фасад">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Загородный коттедж — терраса">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Загородный коттедж — интерьер">
+                </div>
+                <button onclick="galleryPrev('gallery2', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Предыдущее фото">‹</button>
+                <button onclick="galleryNext('gallery2', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Следующее фото">›</button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" id="dots2">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('projectModal2')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm" aria-label="Закрыть">✕</button>
+            </div>
+ 
+            <div class="p-6 md:p-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project2">Загородный коттедж</h3>
+                <p class="text-gray-600 text-sm leading-relaxed" data-key="project2Full">Просторный коттедж с террасой и панорамными окнами.</p>
+                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">200 м²</div>
+                        <div class="text-gray-400 text-xs mt-0.5">площадь</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">5 мес.</div>
+                        <div class="text-gray-400 text-xs mt-0.5">срок</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">A+</div>
+                        <div class="text-gray-400 text-xs mt-0.5">класс</div>
+                    </div>
+                </div>
+                <a href="contacts.html" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Получить консультацию</a>
+            </div>
         </div>
     </div>
-    <div id="projectModal3" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white p-6 sm:p-8 rounded-xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <h3 class="text-xl sm:text-2xl font-bold mb-4" data-key="project3">Минималистичный дом</h3>
-            <p class="text-gray-600" data-key="project3Full">Современный минимализм с функциональной планировкой.</p>
+ 
+    <!-- МОДАЛКА 3 — Минималистичный дом -->
+    <div id="projectModal3" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl max-w-2xl w-full relative max-h-[90vh] overflow-y-auto shadow-2xl">
+ 
+            <div class="relative">
+                <div class="gallery-track flex transition-transform duration-400 rounded-t-2xl overflow-hidden" id="gallery3">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Минималистичный дом — фасад">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Минималистичный дом — кухня">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" class="w-full flex-shrink-0 h-60 md:h-72 object-cover" alt="Минималистичный дом — гостиная">
+                </div>
+                <button onclick="galleryPrev('gallery3', 3)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Предыдущее фото">‹</button>
+                <button onclick="galleryNext('gallery3', 3)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-9 h-9 rounded-full flex items-center justify-center transition" aria-label="Следующее фото">›</button>
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" id="dots3">
+                    <span class="w-2 h-2 rounded-full bg-white block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                    <span class="w-2 h-2 rounded-full bg-white/50 block"></span>
+                </div>
+                <button onclick="closeModal('projectModal3')" class="absolute top-3 right-3 bg-black/40 hover:bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center transition text-sm" aria-label="Закрыть">✕</button>
+            </div>
+ 
+            <div class="p-6 md:p-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#3e2723] mb-3" data-key="project3">Минималистичный дом</h3>
+                <p class="text-gray-600 text-sm leading-relaxed" data-key="project3Full">Современный минимализм с функциональной планировкой.</p>
+                <div class="mt-5 grid grid-cols-3 gap-3 text-center text-sm">
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">120 м²</div>
+                        <div class="text-gray-400 text-xs mt-0.5">площадь</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">3 мес.</div>
+                        <div class="text-gray-400 text-xs mt-0.5">срок</div>
+                    </div>
+                    <div class="bg-[#f5f5f5] rounded-xl p-3">
+                        <div class="font-bold text-[#3e2723]">A+</div>
+                        <div class="text-gray-400 text-xs mt-0.5">класс</div>
+                    </div>
+                </div>
+                <a href="contacts.html" class="mt-6 block text-center bg-[#3e2723] text-white px-6 py-3 rounded-full hover:bg-[#5d4037] transition text-sm" data-key="ctaContact">Получить консультацию</a>
+            </div>
         </div>
     </div>
     
