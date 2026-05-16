@@ -307,6 +307,19 @@ const translations = {
         adv5Desc: "We use SIP and innovative solutions",
         adv6: "Individual approach",
         adv6Desc: "We consider all client needs",
+        adv7: "Energy efficiency",
+        adv7Desc: "Class A+ — heating costs reduced by up to 60%",
+        adv8: "European standards",
+        adv8Desc: "We build to European norms and use certified materials",
+        advFaqTitle: "Frequently Asked Questions",
+        advFaq1Q: "How durable is a SIP house compared to a brick one?",
+        advFaq1A: "SIP panels can withstand loads comparable to brick walls, and in some compression and seismic tests, they outperform them. The construction has been proven over decades of operation in Europe and North America.", 
+        advFaq2Q: "How energy-efficient is a SIP house in winter?",
+        advFaq2A: "Thanks to the monolithic layer of insulation without cold bridges, a class A+ house consumes 50–60% less energy for heating than a traditional house of similar area.",
+        advFaq3Q: "Does the construction comply with European standards?",
+        advFaq3A: "Yes. We use certified materials and work in accordance with European building standards. All panels undergo quality control before delivery to the site.",
+        advCtaTitle: "Convinced of our advantages?",
+        advCtaDesc: "Contact us — we'll discuss your project and show how these advantages work for you",
         projectsTitle: "Our Projects",
         projectsDesc: "Explore our completed house construction projects.",
         catModern: "Modern",
@@ -438,6 +451,7 @@ const translations = {
         send: "Trimite",
         servicesTitle: "Serviciile noastre",
         servicesDesc: "Oferim servicii complete în domeniul construcțiilor.",
+        servicesIntro: "Eco Haus Meister oferă o gamă completă de servicii în construcția caselor eficiente energetic. Lucrăm cu tehnologia SIP și ne ocupăm de întregul proces — de la proiectare arhitecturală până la finisaje finale și predare.",
         service1: "Proiectare",
         service2: "Inginerie",
         service3: "Construcție",
@@ -484,6 +498,19 @@ const translations = {
         adv5Desc: "Folosim SIP și soluții inovatoare",
         adv6: "Abordare individuală",
         adv6Desc: "Ținem cont de toate cerințele clientului",
+        adv7: "Eficiență energetică",
+        adv7Desc: "Clasa A+ — costuri de încălzire reduse cu până la 60%",
+        adv8: "Standardele europene",
+        adv8Desc: "Construim conform normelor europene și folosim materiale certificate",
+        advFaqTitle: "Întrebări frecvente",
+        advFaq1Q: "Cât de durabilă este o casă SIP comparativ cu una din cărămidă?",
+        advFaq1A: "Panourile SIP pot rezista la sarcini comparabile cu pereții din cărămidă, iar în unele teste de compresie și seismice, le depășesc. Construcția a fost dovedită de decenii de exploatare în Europa și America de Nord.",
+        advFaq2Q: "Cât de eficientă energetic este o casă SIP iarna?",
+        advFaq2A: "Datorită stratului monolitic de izolație fără punți termice, o casă clasa A+ consumă cu 50–60% mai puțină energie pentru încălzire decât o casă tradițională de suprafață similară.",
+        advFaq3Q: "Respectați standardele europene în construcție?",
+        advFaq3A: "Da. Folosim materiale certificate și lucrăm în conformitate cu standardele europene de construcție. Toate panourile trec prin controlul calității înainte de livrarea pe șantier.",
+        advCtaTitle: "Convins de avantajele noastre?",
+        advCtaTitleDesc: "Contactați-ne — vom discuta proiectul și vă vom arăta cum funcționează aceste avantaje pentru dvs.",
         projectsTitle: "Proiectele noastre",
         projectsDesc: "Descoperiți proiectele noastre realizate.",
         catModern: "Moderne",
@@ -615,6 +642,7 @@ const translations = {
         send: "Senden",
         servicesTitle: "Unsere Dienstleistungen",
         servicesDesc: "Wir bieten umfassende Bauleistungen an.",
+        servicesIntro: "Eco Haus Meister bietet eine vollständige Palette von Dienstleistungen im energieeffizienten Hausbau. Wir arbeiten mit SIP-Technologie und kümmern uns um den gesamten Prozess — von der architektonischen Planung bis zu den abschließenden Arbeiten und der Übergabe.",
         service1: "Planung",
         service2: "Ingenieurwesen",
         service3: "Bau",
@@ -661,6 +689,19 @@ const translations = {
         adv5Desc: "Wir nutzen SIP und innovative Lösungen",
         adv6: "Individuelle Herangehensweise",
         adv6Desc: "Wir berücksichtigen alle Kundenwünsche",
+        adv7: "Energieeffizienz",
+        adv7Desc: "Klasse A+ — Heizkosten um bis zu 60% reduziert",
+        adv8: "Europäische Standards",
+        adv8Desc: "Wir bauen nach europäischen Normen und verwenden zertifizierte Materialien",
+        advFaqTitle: "Häufig gestellte Fragen",
+        advFaq1Q: "Wie langlebig ist ein SIP-Haus im Vergleich zu einem Ziegelhaus?",
+        advFaq1A: "SIP-Paneele können Lasten aushalten, die mit Ziegelwänden vergleichbar sind, und übertreffen sie in einigen Druck- und Erdbebentests. Die Konstruktion hat sich über Jahrzehnte in Europa und Nordamerika bewährt.",
+        advFaq2Q: "Wie energieeffizient ist ein SIP-Haus im Winter?",
+        advFaq2A: "Dank der monolithischen Isolationschicht ohne Wärmemäntel verbraucht ein A+-haus 50–60% weniger Energie für die Heizung als ein herkömmliches Haus gleicher Größe.",
+        advFaq3Q: "Entspricht die Konstruktion europäischen Standards?",
+        advFaq3A: "Ja. Wir verwenden zertifizierte Materialien und arbeiten gemäß europäischer Baustandards. Alle Paneele durchlaufen eine Qualitätskontrolle vor der Lieferung zum Bauort.",
+        advCtaTitle: "Überzeugt von unseren Vorteilen?",
+        advCtaDesc: "Kontaktieren Sie uns — wir besprechen Ihr Projekt und zeigen Ihnen, wie diese Vorteile für Sie funktionieren",
         projectsTitle: "Unsere Projekte",
         projectsDesc: "Entdecken Sie unsere realisierten Bauprojekte.",
         catModern: "Modern",
@@ -799,7 +840,6 @@ function setLang(lang) {
     if (el) el.innerText = translations[lang].lang;
     const mob = document.getElementById("currentLangMobile");
     if (mob) mob.innerText = shortNames[lang] || lang.toUpperCase();
- 
     const elements = document.querySelectorAll("[data-key]");
     elements.forEach(el => {
         const key = el.getAttribute("data-key");
@@ -815,6 +855,7 @@ function setLang(lang) {
     const lm = document.getElementById("langMenuMobile");
     if (lm) lm.classList.add("hidden");
     localStorage.setItem("lang", lang);
+    localStorage.setItem("userChoseLang", "true");
 }
  
 function toggleMenu() {
@@ -823,34 +864,27 @@ function toggleMenu() {
     const b2 = document.getElementById("burger2");
     const b3 = document.getElementById("burger3");
     const isOpen = menu.dataset.open === "true";
- 
     if (!isOpen) {
-        // Открываем
         menu.classList.remove("hidden");
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
         menu.style.overflow = "hidden";
         menu.style.transition = "max-height 0.35s ease, opacity 0.25s ease";
-        // Запускаем через один кадр чтобы transition сработал
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                menu.style.maxHeight = menu.scrollHeight + "px";
-                menu.style.opacity = "1";
-            });
-        });
+        requestAnimationFrame(() => { requestAnimationFrame(() => {
+            menu.style.maxHeight = menu.scrollHeight + "px";
+            menu.style.opacity = "1";
+        }); });
         menu.dataset.open = "true";
         if (b1) b1.style.transform = "translateY(8px) rotate(45deg)";
         if (b2) b2.style.opacity = "0";
         if (b3) b3.style.transform = "translateY(-8px) rotate(-45deg)";
     } else {
-        // Закрываем
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
         menu.dataset.open = "false";
         if (b1) b1.style.transform = "";
         if (b2) b2.style.opacity = "";
         if (b3) b3.style.transform = "";
-        // Прячем после окончания анимации
         setTimeout(() => {
             menu.classList.add("hidden");
             menu.style.maxHeight = "";
@@ -870,14 +904,22 @@ function closeModal(id) {
     document.getElementById(id).classList.remove("flex");
 }
  
+function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector(".faq-icon");
+    const isOpen = !answer.classList.contains("hidden");
+    answer.classList.toggle("hidden");
+    if (icon) icon.textContent = isOpen ? "+" : "−";
+}
+ 
 document.addEventListener("DOMContentLoaded", () => {
+    if (!localStorage.getItem("userChoseLang")) {
+        localStorage.setItem("lang", "de");
+    }
     const savedLang = localStorage.getItem("lang") || "de";
     setLang(savedLang);
- 
-    // Показываем страницу после применения языка — убирает мигание
     document.documentElement.style.visibility = '';
  
-    // Закрывать меню при клике вне
     document.addEventListener("click", (e) => {
         const langMenu = document.getElementById("langMenu");
         const langMenuMobile = document.getElementById("langMenuMobile");
@@ -889,7 +931,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
  
-    // Слайдер — только на главной
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
@@ -900,39 +941,47 @@ document.addEventListener("DOMContentLoaded", () => {
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.classList.add("hidden");
-                if (dots[i]) {
-                    dots[i].classList.remove("bg-white");
-                    dots[i].classList.add("bg-white/50");
-                }
+                if (dots[i]) { dots[i].classList.remove("bg-white"); dots[i].classList.add("bg-white/50"); }
             });
             slides[index].classList.remove("hidden");
-            if (dots[index]) {
-                dots[index].classList.add("bg-white");
-                dots[index].classList.remove("bg-white/50");
-            }
+            if (dots[index]) { dots[index].classList.add("bg-white"); dots[index].classList.remove("bg-white/50"); }
         }
- 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
- 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
- 
+        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
         nextBtn.addEventListener("click", nextSlide);
         prevBtn.addEventListener("click", prevSlide);
- 
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                currentSlide = i;
-                showSlide(i);
-            });
-        });
- 
+        dots.forEach((dot, i) => { dot.addEventListener("click", () => { currentSlide = i; showSlide(i); }); });
         showSlide(0);
         setInterval(nextSlide, 5000);
     }
+ 
+    document.querySelectorAll('.fixed.inset-0').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        });
+    });
 });
+ 
+const galleryState = {};
+function galleryNext(id, total) {
+    if (!galleryState[id]) galleryState[id] = 0;
+    galleryState[id] = (galleryState[id] + 1) % total;
+    updateGallery(id, total);
+}
+function galleryPrev(id, total) {
+    if (!galleryState[id]) galleryState[id] = 0;
+    galleryState[id] = (galleryState[id] - 1 + total) % total;
+    updateGallery(id, total);
+}
+function updateGallery(id, total) {
+    const track = document.getElementById(id);
+    const idx = galleryState[id];
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    const num = id.replace('gallery', '');
+    const dotsEl = document.getElementById('dots' + num);
+    if (dotsEl) {
+        dotsEl.querySelectorAll('span').forEach((dot, i) => {
+            dot.className = i === idx ? 'w-2 h-2 rounded-full bg-white block' : 'w-2 h-2 rounded-full bg-white/50 block';
+        });
+    }
+}
