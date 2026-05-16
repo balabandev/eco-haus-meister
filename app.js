@@ -867,7 +867,7 @@ function toggleMenu() {
     const isOpen = menu.dataset.open === "true";
  
     if (!isOpen) {
-        // Открываем
+        
         menu.classList.remove("hidden");
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
@@ -885,14 +885,14 @@ function toggleMenu() {
         if (b2) b2.style.opacity = "0";
         if (b3) b3.style.transform = "translateY(-8px) rotate(-45deg)";
     } else {
-        // Закрываем
+        
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
         menu.dataset.open = "false";
         if (b1) b1.style.transform = "";
         if (b2) b2.style.opacity = "";
         if (b3) b3.style.transform = "";
-        // Прячем после окончания анимации
+        
         setTimeout(() => {
             menu.classList.add("hidden");
             menu.style.maxHeight = "";
@@ -952,13 +952,13 @@ function toggleMenu() {
     const isOpen = menu.dataset.open === "true";
  
     if (!isOpen) {
-        // Открываем
+        
         menu.classList.remove("hidden");
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
         menu.style.overflow = "hidden";
         menu.style.transition = "max-height 0.35s ease, opacity 0.25s ease";
-        // Запускаем через один кадр чтобы transition сработал
+        
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
                 menu.style.maxHeight = menu.scrollHeight + "px";
@@ -970,14 +970,14 @@ function toggleMenu() {
         if (b2) b2.style.opacity = "0";
         if (b3) b3.style.transform = "translateY(-8px) rotate(-45deg)";
     } else {
-        // Закрываем
+        
         menu.style.maxHeight = "0px";
         menu.style.opacity = "0";
         menu.dataset.open = "false";
         if (b1) b1.style.transform = "";
         if (b2) b2.style.opacity = "";
         if (b3) b3.style.transform = "";
-        // Прячем после окончания анимации
+        
         setTimeout(() => {
             menu.classList.add("hidden");
             menu.style.maxHeight = "";
@@ -1001,10 +1001,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("lang") || "de";
     setLang(savedLang);
  
-    // Показываем страницу после применения языка — убирает мигание
+    
     document.documentElement.style.visibility = '';
  
-    // Закрывать меню при клике вне
+    
     document.addEventListener("click", (e) => {
         const langMenu = document.getElementById("langMenu");
         const langMenuMobile = document.getElementById("langMenuMobile");
@@ -1016,7 +1016,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
  
-    // Слайдер — только на главной
+
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dot");
@@ -1082,8 +1082,6 @@ const galleryState = {};
             const track = document.getElementById(id);
             const idx = galleryState[id];
             track.style.transform = `translateX(-${idx * 100}%)`;
- 
-            // Обновить точки
             const num = id.replace('gallery', '');
             const dotsEl = document.getElementById('dots' + num);
             if (dotsEl) {
@@ -1095,7 +1093,7 @@ const galleryState = {};
             }
         }
  
-        // Закрывать модалку по клику на фон
+        
         document.querySelectorAll('.fixed.inset-0').forEach(modal => {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
