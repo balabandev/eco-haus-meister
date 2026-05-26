@@ -131,89 +131,164 @@
  
         <!-- HERO -->
         <section class="relative h-[280px] md:h-[380px] overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center"
-                style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')"
-                role="img" aria-label="Строительство домов Eco Meister Haus">
-            </div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')" role="img" aria-label="Hausbau Eco Meister Haus"></div>
             <div class="absolute inset-0 bg-[#3e2723]/70"></div>
             <div class="relative h-full flex flex-col items-center justify-center text-center px-4">
-                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="servicesTitle">
-                    Unsere Dienstleistungen
-                </h1>
-                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="servicesHeroDesc">
-                    Komplexe Lösungen — von der Planung bis zum fertigen Haus Schlüssel in Hand
-                </p>
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4" data-key="servicesTitle">Unsere Dienstleistungen</h1>
+                <p class="text-white/80 text-sm md:text-lg max-w-xl" data-key="servicesHeroDesc">Umfassende Lösungen — vom Projekt bis zum schlüsselfertigen Haus</p>
             </div>
         </section>
  
-        <!-- INTRO TEXT для SEO -->
+        <!-- INTRO -->
         <section class="py-10 md:py-14 bg-[#f5f5f5]">
             <div class="max-w-3xl mx-auto px-4 text-center">
                 <p class="text-gray-600 text-sm md:text-base leading-relaxed" data-key="servicesIntro">
-                    Eco Haus Meister bietet eine vollständige Palette von Dienstleistungen im energieeffizienten Hausbau. Wir arbeiten mit SIP-Technologie und kümmern uns um den gesamten Prozess — von der architektonischen Planung bis zu den abschließenden Arbeiten und der Übergabe.
+                    Eco Meister Haus bietet ein vollständiges Spektrum an Dienstleistungen im energieeffizienten Hausbau. Wir arbeiten mit SIP-Technologie und übernehmen den gesamten Prozess — vom Architekturprojekt bis zur Endausstattung und Übergabe.
                 </p>
             </div>
         </section>
  
-        <!-- КАРТОЧКИ УСЛУГ -->
-        <section class="py-14 md:py-20">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-8">
+        <!-- LEISTUNGEN KARTEN -->
+        <section class="py-14 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]">Was wir anbieten</h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto">Alle Leistungen aus einer Hand — kein Koordinationsaufwand für Sie</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
  
-                    <div onclick="openModal('modal1')"
-                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
-                        <div class="relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
-                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
-                                alt="Архитектурное проектирование энергоэффективных домов">
-                        </div>
-                        <div class="p-6">
-                            <div class="text-3xl mb-3" aria-hidden="true">📐</div>
-                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service1">Planung</h2>
-                            <p class="text-gray-500 text-sm mb-4" data-key="service1Short">
-                                Individueller architektonischer Entwurf für Ihren Grundstück und Ihr Budget
-                            </p>
-                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
-                                Mehr erfahren →
-                            </span>
-                        </div>
+                    <!-- SIP Montage -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4 text-2xl">🏗️</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Rohbau</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">SIP-Montage & Rohbau</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Lieferung und Montage des SIP-Kits inkl. Dachstruktur. Hausbox in 2–4 Wochen bezugsfertig.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>SIP Premium Kit (Siprom)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>4-Giebeldach Konstruktion</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Transport & Kranmontage</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Luftdichtigkeitstest</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">ab ~95 €/m² <span class="font-normal text-gray-400 text-xs">Montage</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
                     </div>
  
-                    <div onclick="openModal('modal2')"
-                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
-                        <div class="relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
-                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
-                                alt="Инженерные системы и коммуникации дома">
-                        </div>
-                        <div class="p-6">
-                            <div class="text-3xl mb-3" aria-hidden="true">⚙️</div>
-                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service2">Ingenieurwesen</h2>
-                            <p class="text-gray-500 text-sm mb-4" data-key="service2Short">
-                                Elektrik, Heizung, Ventilation und Wasserversorgung — vollständiger ingenieurtechnischer Komplex
-                            </p>
-                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
-                                Mehr erfahren →
-                            </span>
-                        </div>
+                    <!-- Fundament -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 text-2xl">🏛️</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Fundament</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">Fundament & Erdarbeiten</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Betonfundament nach statischen Plänen, Erdarbeiten, Drainage und Bodenplatte.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Aushub & Nivellierung</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Betonfundament (Stahlbeton)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Drainage & Abdichtung</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Bodenplatte mit Dämmung</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">~12.800 € <span class="font-normal text-gray-400 text-xs">Beispiel 174 m²</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
                     </div>
  
-                    <div onclick="openModal('modal3')"
-                        class="bg-white rounded-2xl shadow hover:shadow-xl transition cursor-pointer group overflow-hidden">
-                        <div class="relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
-                                class="h-52 w-full object-cover group-hover:scale-105 transition duration-500"
-                                alt="Строительство дома под ключ по технологии SIP">
-                        </div>
-                        <div class="p-6">
-                            <div class="text-3xl mb-3" aria-hidden="true">🏠</div>
-                            <h2 class="text-xl font-bold text-[#3e2723] mb-2" data-key="service3">Bau</h2>
-                            <p class="text-gray-500 text-sm mb-4" data-key="service3Short">
-                                Wir bauen das Haus vom Fundament bis zur Schlüsselübergabe — schnell, zuverlässig und zu einem festen Preis
-                            </p>
-                            <span class="text-[#3e2723] font-medium text-sm flex items-center gap-1" data-key="learnMore">
-                                Mehr erfahren →
-                            </span>
+                    <!-- Dach & Fenster -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4 text-2xl">🪟</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Außenhülle</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">Dach, Fenster & Türen</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Metalldach, PVC-Fenster (Uw ≤ 0,80), Außen- und Innentüren — komplett montiert.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Blechdach 4-Giebel</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>16 Fenster PVC (Uw ≤ 0,80)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Außentüren + Terrassentür</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Dachrinnen & Anschlüsse</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">~14.000 € <span class="font-normal text-gray-400 text-xs">Material + Montage</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
+                    </div>
+ 
+                    <!-- WDVS Fassade -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center mb-4 text-2xl">🧱</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Außenhülle</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">WDVS Fassade & Putz</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Außen-Wärmedämmverbundsystem mit Basaltwolle 100 mm + Armierungsputz + Silikatputz. Energieklasse A+.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Basaltwolle 100 mm (nicht brennbar)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Armierungsgewebe + Putz</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Silikatputz Fassade ~170 m²</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Sockelabdichtung, Anschlüsse</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">~75 €/m² <span class="font-normal text-gray-400 text-xs">inkl. Material</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
+                    </div>
+ 
+                    <!-- Haustechnik -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center mb-4 text-2xl">⚙️</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">TGA</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">Haustechnik (TGA)</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Heizung, Sanitär und Elektrik — vollständiger Ausbau nach deutschen Normen.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Wärmepumpe (KfW 458 empfohlen)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Fußbodenheizung + Sanitär</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Elektroinstallation 2 Whg.</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Lüftung mit Wärmerückgewinnung</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">ab ~26.000 € <span class="font-normal text-gray-400 text-xs">geschätzt</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
+                    </div>
+ 
+                    <!-- Innenausbau -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center mb-4 text-2xl">🖌️</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Innenausbau</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">Innenausbau & Finishing</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Böden, Wände, Decken, Sanitärkeramik — schlüsselfertiger Innenausbau nach Ihren Wünschen.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Bodenbeläge (Fliesen, Parkett)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Innenputz, Spachtelung, Maler</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Innentreppe + ~10 Innentüren</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Sanitärkeramik + Armaturen</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">~22.000 € <span class="font-normal text-gray-400 text-xs">Mittelklasse</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
+                    </div>
+ 
+                    <!-- Planung -->
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow hover:shadow-lg transition-all hover:-translate-y-1 p-6">
+                        <div class="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center mb-4 text-2xl">📐</div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-wider text-[#3e2723]/60 mb-2">Planung</span>
+                        <h3 class="text-lg font-bold text-[#3e2723] mb-2">Planung & Baugenehmigung</h3>
+                        <p class="text-gray-500 text-sm mb-4 leading-relaxed">Architekturplanung, Statik, Energieausweis und Baugenehmigung nach deutschem Baurecht.</p>
+                        <ul class="space-y-2 mb-5">
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Architekturentwurf + Ausführung</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Statische Berechnung</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>Energieausweis (DENA-Berater)</li>
+                            <li class="flex items-start gap-2 text-sm text-gray-500"><i class="fa-solid fa-check text-[#3e2723] mt-0.5 text-xs flex-shrink-0"></i>KfW-Förderantrag vorbereiten</li>
+                        </ul>
+                        <div class="font-bold text-[#3e2723]">~4.500 € <span class="font-normal text-gray-400 text-xs">obligatorisch</span></div>
+                        <a href="contacts.html" class="mt-4 inline-flex items-center gap-1 text-[#3e2723] font-medium text-sm hover:gap-2 transition-all">Angebot anfragen →</a>
+                    </div>
+ 
+                    <!-- Schlüsselfertig (featured) -->
+                    <div class="sm:col-span-2 bg-[#3e2723] rounded-2xl shadow-xl p-6 md:p-8">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="flex-1">
+                                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-amber-400 mb-2">⭐ Empfehlung</span>
+                                <h3 class="text-xl md:text-2xl font-bold text-white mb-3">Alles aus einer Hand — schlüsselfertig</h3>
+                                <p class="text-white/70 text-sm leading-relaxed mb-4">Kein Koordinationsaufwand, kein Risiko. Wir übernehmen jeden Schritt und übergeben Ihnen ein bezugsfertiges Haus mit Garantie.</p>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="flex items-center gap-2 text-sm text-white/80"><i class="fa-solid fa-check text-amber-400 text-xs"></i>Ein Ansprechpartner</div>
+                                    <div class="flex items-center gap-2 text-sm text-white/80"><i class="fa-solid fa-check text-amber-400 text-xs"></i>Festpreis — keine Überraschungen</div>
+                                    <div class="flex items-center gap-2 text-sm text-white/80"><i class="fa-solid fa-check text-amber-400 text-xs"></i>Zeitplan schriftlich</div>
+                                    <div class="flex items-center gap-2 text-sm text-white/80"><i class="fa-solid fa-check text-amber-400 text-xs"></i>5 Jahre Garantie auf Bauwerk</div>
+                                </div>
+                            </div>
+                            <div class="flex-shrink-0 text-center">
+                                <div class="text-white/60 text-sm mb-1">Beispielprojekt 174 m²</div>
+                                <div class="text-3xl md:text-4xl font-bold text-white">~151.667 €</div>
+                                <div class="text-white/60 text-sm mt-1">≈ 872 €/m² schlüsselfertig</div>
+                                <a href="contacts.html" class="mt-4 inline-block bg-amber-400 text-[#3e2723] font-semibold px-6 py-3 rounded-full hover:bg-amber-300 transition text-sm">Projekt besprechen →</a>
+                            </div>
                         </div>
                     </div>
  
@@ -221,45 +296,196 @@
             </div>
         </section>
  
+        <!-- KALKULATION -->
+        <section class="py-14 md:py-20 bg-[#f5f5f5]" id="preise">
+            <div class="max-w-5xl mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <span class="inline-block text-xs font-semibold uppercase tracking-widest text-[#3e2723]/60 mb-3">Transparente Preise</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]">Beispielkalkulation: SIP-Haus 174 m²</h2>
+                    <p class="text-gray-500 mt-3 text-sm md:text-base max-w-xl mx-auto">Ein reales Projekt — aufgeschlüsselt nach Gewerk. Ihr Preis hängt von Grundstück, Ausstattung und Region ab.</p>
+                </div>
+ 
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <!-- Header -->
+                    <div class="bg-[#3e2723] p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-1">SIP-Doppelhaus, 174 m² Wohnfläche, Berlin</h3>
+                            <p class="text-white/60 text-sm">4-Giebeldach · 2 Wohneinheiten · Energieklasse A+ · KfW-fähig</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-white/60 text-xs mb-1">Gesamtprojekt geschätzt</div>
+                            <div class="text-3xl font-bold text-white">~151.667 €</div>
+                            <div class="text-white/60 text-xs mt-1">≈ 872 €/m² schlüsselfertig</div>
+                        </div>
+                    </div>
+ 
+                    <!-- Positionen -->
+                    <div class="p-6 md:p-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Materialien -->
+                            <div>
+                                <h4 class="text-xs font-semibold uppercase tracking-wider text-[#3e2723] mb-4">Materialien & Fundament</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">SIP Premium Kit Siprom (174 m²)</span><span class="font-medium text-gray-800">39.411 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">16 Fenster PVC — Polen (Uw ≤ 0,80)</span><span class="font-medium text-gray-800">5.180 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Außentüren 2 Stk. + Terrassentür + Innentüren</span><span class="font-medium text-gray-800">3.600 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Blechdach 4-Giebel 124 m² — Material</span><span class="font-medium text-gray-800">2.000 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Fundament Beton (27,5 m³ gem. Plänen)</span><span class="font-medium text-gray-800">12.796 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Transport PL + RO → Berlin</span><span class="font-medium text-gray-800">600 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 font-semibold"><span class="text-[#3e2723]">Gesamt Materialien + Fundament</span><span class="text-[#3e2723]">63.587 €</span></div>
+                                </div>
+                            </div>
+                            <!-- Arbeiten -->
+                            <div>
+                                <h4 class="text-xs font-semibold uppercase tracking-wider text-[#3e2723] mb-4">Arbeitskosten Deutschland</h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Montage SIP + Dachstruktur (174 m² × 95 €)</span><span class="font-medium text-gray-800">16.530 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Dachmontage Blech + Rinnen (124 m² × 25 €)</span><span class="font-medium text-gray-800">3.100 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Fenster + Türen Montage (16 Stk. × 200 €)</span><span class="font-medium text-gray-800">3.200 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">WDVS Fassade (170 m² × 75 €)</span><span class="font-medium text-gray-800">12.750 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Sanitär + Heizung (WP KfW-empf.)</span><span class="font-medium text-gray-800">18.000 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Elektro 2 Wohnungen</span><span class="font-medium text-gray-800">8.000 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Innenausbau Mittelklasse</span><span class="font-medium text-gray-800">22.000 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 border-b border-gray-100"><span class="text-gray-600">Energieberater DENA + KfW + DTAC Berlin</span><span class="font-medium text-gray-800">4.500 €</span></div>
+                                    <div class="flex justify-between text-sm py-2 font-semibold"><span class="text-[#3e2723]">Gesamt Arbeiten + Ausbau</span><span class="text-[#3e2723]">88.080 €</span></div>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <!-- Total -->
+                        <div class="mt-8 bg-[#f5f5f5] rounded-xl p-5 flex flex-col md:flex-row md:items-center justify-between gap-3">
+                            <div class="text-sm text-gray-500">Gesamtprojekt geschätzt (174 m², Berlin, 2025)</div>
+                            <div class="text-2xl font-bold text-[#3e2723]">~ 151.667 €</div>
+                        </div>
+                        <p class="mt-4 text-xs text-gray-400 flex items-start gap-2"><i class="fa-solid fa-circle-info text-[#3e2723]/40 mt-0.5 flex-shrink-0"></i>Preise sind Richtwerte. Ihr individuelles Angebot erhalten Sie nach kostenlosem Beratungsgespräch. Fördermittel (KfW) sind in dieser Kalkulation nicht abgezogen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- KFW -->
+        <section class="py-14 md:py-20 bg-white" id="kfw">
+            <div class="max-w-6xl mx-auto px-4 md:px-6">
+                <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+ 
+                    <!-- KfW Karte -->
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8">
+                        <div class="text-2xl font-bold text-amber-700 tracking-wide mb-1">KfW</div>
+                        <div class="text-xs text-gray-500 mb-5">Kreditanstalt für Wiederaufbau</div>
+                        <h3 class="text-xl font-bold text-[#3e2723] mb-3">Bis zu 150.000 € Förderung für Ihr SIP-Haus</h3>
+                        <p class="text-gray-600 text-sm mb-5 leading-relaxed">Unsere Häuser erfüllen die Anforderungen für KfW-Förderprogramme. Wir begleiten Sie beim Antrag.</p>
+                        <ul class="space-y-3 mb-5">
+                            <li class="flex items-start gap-3 text-sm text-gray-600"><span class="text-amber-600 font-bold flex-shrink-0">→</span>KfW 297/298 — Neubau Effizienzhaus 40/55 (Kredit bis 150.000 €)</li>
+                            <li class="flex items-start gap-3 text-sm text-gray-600"><span class="text-amber-600 font-bold flex-shrink-0">→</span>KfW 458 — Wärmepumpe, Zuschuss 30–70 %</li>
+                            <li class="flex items-start gap-3 text-sm text-gray-600"><span class="text-amber-600 font-bold flex-shrink-0">→</span>BAFA-Zuschuss für erneuerbare Energien</li>
+                            <li class="flex items-start gap-3 text-sm text-gray-600"><span class="text-amber-600 font-bold flex-shrink-0">→</span>DENA-Energieberater inklusive (Pflicht für KfW)</li>
+                        </ul>
+                        <div class="bg-amber-100 rounded-xl p-4 text-sm text-amber-800 font-medium">
+                            💡 Bei 150.000 € Kredit können Sie gegenüber Marktkonditionen ca. 20.000–30.000 € Zinsen sparen.
+                        </div>
+                    </div>
+ 
+                    <!-- Ablauf -->
+                    <div>
+                        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-[#3e2723]/60 mb-3">Unser Ablauf</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-8">Wie wir vorgehen</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">1</div>
+                                <div>
+                                    <h4 class="font-semibold text-[#3e2723] mb-1">Kostenloses Erstgespräch</h4>
+                                    <p class="text-gray-500 text-sm">Grundstück, Wunschgröße, Budget, Zeitplan — wir analysieren Ihre Situation ohne Kosten.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">2</div>
+                                <div>
+                                    <h4 class="font-semibold text-[#3e2723] mb-1">Angebot & Planung</h4>
+                                    <p class="text-gray-500 text-sm">Wir erstellen ein detailliertes Festpreisangebot + Grundriss. DENA-Energieberater koordinieren wir.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">3</div>
+                                <div>
+                                    <h4 class="font-semibold text-[#3e2723] mb-1">KfW-Antrag stellen</h4>
+                                    <p class="text-gray-500 text-sm">Vor Baubeginn beantragen wir gemeinsam die Förderung — Pflichtschritt für KfW 297/298.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">4</div>
+                                <div>
+                                    <h4 class="font-semibold text-[#3e2723] mb-1">Bau & Übergabe</h4>
+                                    <p class="text-gray-500 text-sm">3–6 Monate Bauzeit. Wöchentliche Fortschrittsberichte. Schlüsselübergabe mit Abnahmeprotokoll.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#3e2723] text-white flex items-center justify-center font-bold text-sm">5</div>
+                                <div>
+                                    <h4 class="font-semibold text-[#3e2723] mb-1">5 Jahre Garantie</h4>
+                                    <p class="text-gray-500 text-sm">Schriftliche Gewährleistung auf Bauwerk und Dichtheit. Ihr Haus — Ihre Sicherheit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
         <!-- FAQ -->
         <section class="py-12 md:py-16 bg-[#f5f5f5]">
-            <div class="max-w-3xl mx-auto px-4">
-                <h2 class="text-xl md:text-2xl font-bold text-[#3e2723] mb-8 text-center" data-key="faqTitle">
-                    Häufig gestellte Fragen
-                </h2>
-                <div class="flex flex-col gap-3">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <span class="inline-block text-xs font-semibold uppercase tracking-widest text-[#3e2723]/60 mb-3">Häufige Fragen</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723]">Was unsere Kunden fragen</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
  
                     <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                        <button onclick="toggleFaq(this)"
-                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                            <span data-key="faq1Q">Wie lange dauert die Bauzeit eines Hauses?</span>
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Was kostet ein SIP-Haus schlüsselfertig?</span>
                             <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
                         </button>
-                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq1A">
-                            SIP-Paneele können Lasten aushalten, die mit Ziegelwänden vergleichbar sind, und übertreffen sie in einigen Druck- und Erdbebentests. Die Konstruktion hat sich über Jahrzehnte in Europa und Nordamerika bewährt.
-                        </div>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">Ab ca. 260 €/m² für den SIP-Kit allein, oder 700–900 €/m² für ein vollständig schlüsselfertiges Haus inkl. Fundament, TGA und Innenausbau. Unser Beispielprojekt (174 m², Berlin) liegt bei ca. 151.667 € vor KfW-Abzug.</div>
                     </div>
  
                     <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                        <button onclick="toggleFaq(this)"
-                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                            <span data-key="faq2Q">Können Sie den Projektplan während des Bauvorgangs ändern?</span>
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Wie lange dauert der Bau?</span>
                             <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
                         </button>
-                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq2A">
-                            Kleinere Änderungen sind möglich, bevor die SIP-Paneele in Produktion gehen. Nach dem Start der Produktion sind Anpassungen begrenzt. Daher legen wir großen Wert auf die endgültige Projektabsprache.
-                        </div>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">Die SIP-Hausbox (Rohbau) wird in 2–4 Wochen montiert. Der gesamte Prozess vom ersten Spatenstich bis zur Schlüsselübergabe dauert in der Regel 3–6 Monate.</div>
                     </div>
  
                     <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-                        <button onclick="toggleFaq(this)"
-                            class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
-                            <span data-key="faq3Q">Bieten Sie eine Garantie für den gebauten Haus?</span>
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Kann ich KfW-Förderung bekommen?</span>
                             <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
                         </button>
-                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed" data-key="faq3A">
-                            Ja. Wir verwenden zertifizierte Materialien und arbeiten gemäß europäischer Baustandards. Alle Paneele durchlaufen eine Qualitätskontrolle vor der Lieferung zum Bauort.
-                        </div>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">Ja. SIP-Häuser können die Energieeffizienzklasse 40 oder 55 erreichen und damit für KfW 297/298 qualifizieren — zinsgünstiges Darlehen bis 150.000 €. Der Antrag muss vor Baubeginn gestellt werden.</div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Bauen Sie nur in Berlin?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">Unser Schwerpunkt liegt in Berlin und der Region Brandenburg. Projekte in anderen Bundesländern besprechen wir gerne im Einzelfall — sprechen Sie uns an.</div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Wie energieeffizient sind SIP-Häuser?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">SIP-Häuser erreichen regelmäßig Energieeffizienzklasse A+. Die Heizkosten liegen um bis zu 60 % niedriger als bei einem konventionellen Massivbau. In Kombination mit Wärmepumpe nähert sich das Gebäude dem Passivhausstandard.</div>
+                    </div>
+ 
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-medium text-[#3e2723] flex justify-between items-center gap-4">
+                            <span>Bieten Sie auch einzelne Gewerke an?</span>
+                            <span class="faq-icon text-xl text-gray-400 flex-shrink-0">+</span>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-5 text-gray-500 text-sm leading-relaxed">Ja, wir können auch einzelne Leistungen übernehmen — z. B. nur SIP-Montage, nur Dach oder nur Fassade. Das Rundum-Paket ist jedoch wirtschaftlich am vorteilhaftesten.</div>
                     </div>
  
                 </div>
@@ -267,54 +493,24 @@
         </section>
  
         <!-- CTA -->
-        <section class="py-14 md:py-20">
-            <div class="max-w-2xl mx-auto px-4 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-[#3e2723] mb-4" data-key="servicesCtaTitle">
-                    Brauchen Sie eine Beratung?
-                </h2>
-                <p class="text-gray-500 text-sm md:text-base mb-8" data-key="servicesCtaDesc">
-                    Erzählen Sie uns von Ihrem Projekt — wir beantworten alle Fragen und erstellen ein vorläufiges Angebot
-                </p>
-                <a href="contacts.html"
-                    class="bg-[#3e2723] text-white px-10 py-3 rounded-full hover:bg-[#5d4037] transition shadow-lg"
-                    data-key="ctaContact">
-                    Beratung erhalten
-                </a>
+        <section class="py-16 md:py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')"></div>
+            <div class="absolute inset-0 bg-[#3e2723]/80"></div>
+            <div class="relative max-w-3xl mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-4xl font-bold text-white mb-4">Bereit, Ihr Haus zu planen?</h2>
+                <p class="text-white/75 text-sm md:text-lg mb-3 max-w-xl mx-auto">Erzählen Sie uns von Ihrem Grundstück und Ihren Wünschen — wir erstellen innerhalb von 48 Stunden ein kostenloses Angebot.</p>
+                <p class="text-white/60 text-sm mb-8">📞 Wir sprechen Deutsch, Russisch &amp; Rumänisch</p>
+                <a href="contacts.html" class="bg-amber-400 text-[#3e2723] font-bold px-10 py-4 rounded-full hover:bg-amber-300 transition shadow-lg text-sm md:text-base">Jetzt kostenlos anfragen</a>
             </div>
         </section>
  
     </main>
  
-    <!-- Модальные окна -->
-    <div id="modal1" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
-        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal1')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <div class="text-4xl mb-4" aria-hidden="true">📐</div>
-            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service1">Planung</h3>
-            <p class="text-gray-600 text-sm leading-relaxed" data-key="service1Desc">Wir erstellen moderne und effiziente Hausprojekte.</p>
-        </div>
-    </div>
-    <div id="modal2" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
-        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal2')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <div class="text-4xl mb-4" aria-hidden="true">⚙️</div>
-            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service2">Ingenieurwesen</h3>
-            <p class="text-gray-600 text-sm leading-relaxed" data-key="service2Desc">Komplexe ingenieurtechnische Lösungen.</p>
-        </div>
-    </div>
-    <div id="modal3" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
-        <div class="bg-white p-8 rounded-2xl max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal('modal3')" class="absolute top-3 right-3 text-xl" aria-label="Закрыть">✕</button>
-            <div class="text-4xl mb-4" aria-hidden="true">🏠</div>
-            <h3 class="text-2xl font-bold mb-3 text-[#3e2723]" data-key="service3">Bau</h3>
-            <p class="text-gray-600 text-sm leading-relaxed" data-key="service3Desc">Vollständiger Bauzyklus.</p>
-        </div>
-    </div>
- 
-    <footer class="bg-[#3b0000] py-3 mt-10">
+    <footer class="bg-[#3b0000] py-3">
         <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white">
-            © 2026 Eco Haus Meister. All rights reserved.
+            © 2026 Eco Meister Haus. Alle Rechte vorbehalten.
         </div>
     </footer>
+ 
 </body>
 </html>
