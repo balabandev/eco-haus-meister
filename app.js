@@ -163,6 +163,7 @@ const translations = {
         srvFaq5A: "SIP-дома регулярно достигают класса A+. Затраты на отопление на 60% ниже, чем в традиционном доме. В сочетании с тепловым насосом дом приближается к стандарту пассивного дома.",
         srvFaq6Q: "Можно ли заказать отдельные виды работ?",
         srvFaq6A: "Да, мы можем взять отдельные виды работ — например только монтаж SIP, только кровлю или только фасад. Но полный пакет экономически выгоднее.",
+        srvCtaLang: "Мы говорим на немецком, английском, русском и румынском языках",
     },
  
     en: {
@@ -328,6 +329,7 @@ const translations = {
         srvFaq5A: "SIP houses regularly achieve energy class A+. Heating costs are up to 60% lower than in a conventional building. Combined with a heat pump, the building approaches passive house standard.",
         srvFaq6Q: "Can I order individual trades only?",
         srvFaq6A: "Yes, we can take on individual services — e.g. SIP assembly only, roofing only or facade only. However, the full package is economically most advantageous.",
+        srvCtaLang: "We speak German, English, Russian & Romanian.",
     },
  
     ro: {
@@ -467,6 +469,7 @@ const translations = {
         srvFaq5A: "Casele SIP ating în mod regulat clasa A+. Costurile de încălzire sunt cu până la 60% mai mici decât în construcțiile convenționale. Combinate cu o pompă de căldură, clădirea se apropie de standardul casei pasive.",
         srvFaq6Q: "Pot comanda doar anumite lucrări?",
         srvFaq6A: "Da, putem prelua servicii individuale — de ex. doar montaj SIP, doar acoperiș sau doar fațadă. Pachetul complet este însă cel mai avantajos economic.",
+        srvCtaLang: "Vorbim germană, engleză, rusă și română."
     },
  
     de: {
@@ -632,6 +635,7 @@ const translations = {
         srvFaq5A: "SIP-Häuser erreichen regelmäßig Energieeffizienzklasse A+. Die Heizkosten liegen um bis zu 60 % niedriger als bei einem konventionellen Massivbau. In Kombination mit Wärmepumpe nähert sich das Gebäude dem Passivhausstandard.",
         srvFaq6Q: "Bieten Sie auch einzelne Gewerke an?",
         srvFaq6A: "Ja, wir können auch einzelne Leistungen übernehmen — z. B. nur SIP-Montage, nur Dach oder nur Fassade. Das Rundum-Paket ist jedoch wirtschaftlich am vorteilhaftesten.",
+        srvCtaLang: "Wir sprechen Deutsch, Englisch, Russisch &amp; Rumänisch",
     }
 };
  
